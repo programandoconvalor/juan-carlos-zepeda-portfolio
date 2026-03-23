@@ -23,18 +23,18 @@ export default function AboutSection() {
 
         <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_.85fr] lg:gap-16">
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl font-bold tracking-tight text-[var(--color-title)] sm:text-5xl lg:text-6xl">
+            <h2 className="text-2xl md:text-3xl font-bold">
               {t.about.title}
             </h2>
 
             <div className="mb-7 mt-4">
-              <span className="relative inline-block text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">
-                {t.about.badge}
-                <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-[var(--color-accent)]/70" />
+              <span className="relative text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">
+                {t.hero.greeting} {t.hero.name}
+                <span className="absolute left-0 -bottom-1 h-[2px] w-full " />
               </span>
             </div>
 
-            <p className="max-w-3xl text-base leading-8 text-[var(--color-text)]/95 sm:text-lg sm:leading-9">
+            <p className="text-sm md:text-base leading-relaxed">
               {t.about.description}
             </p>
 

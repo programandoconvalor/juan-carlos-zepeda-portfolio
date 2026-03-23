@@ -62,7 +62,7 @@ const dictionaries: Record<Language, Dictionary> = {
     },
     hero: {
       greeting: "Hola, soy",
-      name: "Juan Carlos Zepeda IA",
+      name: "Juan Carlos Zepeda",
       role: "Ingeniero Front-End Senior",
       roleComplement:
         "especializado en crear experiencias web modernas, rápidas y escalables + IA.",
@@ -81,7 +81,7 @@ const dictionaries: Record<Language, Dictionary> = {
       label: "SOBRE MÍ",
       badge: "Senior Front-End + IA",
       description:
-        "Amplia experiencia en la creación de aplicaciones web responsivas, escalables y orientadas al negocio, utilizando React, Next.js y los ecosistemas modernos de JavaScript.\n\nMe especializo en diseño de interfaces y componentes de alto impacto, integración de API, mejora de la experiencia del usuario y el aprovechamiento de herramientas de IA para fortalecer performance, escalabilidad y calidad del producto.",
+        "Ingeniero Front-End Senior con más de 8 años de experiencia desarrollando aplicaciones web escalables y de alto rendimiento. Especializado en el ecosistema de React y Next.js, enfocado en la creación de experiencias de usuario modernas, arquitecturas frontend robustas e integraciones eficientes con APIs. Genero impacto en el producto mediante la optimización del rendimiento, la mejora continua de la experiencia del usuario y la implementación de soluciones impulsadas por inteligencia artificial, construyendo aplicaciones escalables y listas para producción alineadas a objetivos de negocio.",
       cardTitle1: "UI/UX con impacto",
       cardText1:
         "Interfaces limpias, modernas y pensadas para conversión y experiencia real de usuario.",
@@ -117,7 +117,7 @@ const dictionaries: Record<Language, Dictionary> = {
     },
     hero: {
       greeting: "Hello, I’m",
-      name: "Juan Carlos Zepeda IA",
+      name: "Juan Carlos Zepeda",
       role: "Senior Front-End Engineer",
       roleComplement:
         "specialized in building modern, fast, and scalable web experiences with AI.",
@@ -136,7 +136,7 @@ const dictionaries: Record<Language, Dictionary> = {
       label: "ABOUT ME",
       badge: "Senior Front-End + AI",
       description:
-        "Extensive experience building responsive, scalable, business-oriented web applications using React, Next.js, and modern JavaScript ecosystems.\n\nI specialize in designing high-impact interfaces and components, API integration, improving user experience, and leveraging AI tools to strengthen performance, scalability, and product quality.",
+        "Senior Front-End Engineer with over 8 years of experience developing scalable and high-performance web applications. Specialized in the React and Next.js ecosystem, focused on creating modern user experiences, robust frontend architectures, and efficient API integrations. I drive product impact through performance optimization, continuous user experience improvement, and the implementation of AI-powered solutions, building scalable applications ready for production aligned with business objectives.",
       cardTitle1: "Impactful UI/UX",
       cardText1:
         "Clean, modern interfaces designed for conversion and real user experience.",
