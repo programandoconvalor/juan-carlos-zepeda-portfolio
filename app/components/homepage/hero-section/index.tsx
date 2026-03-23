@@ -8,6 +8,7 @@ import { RiContactsFill } from "react-icons/ri";
 
 import { useLanguage } from "@/app/context/language-context";
 import { personalData } from "@/utils/data/personal-data";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
@@ -32,34 +33,36 @@ export default function HeroSection() {
       <div className="grid w-full grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(470px,600px)] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(500px,630px)] xl:gap-10 2xl:grid-cols-[minmax(0,1fr)_minmax(530px,650px)]">
         <div className="order-1 flex w-full flex-col items-start justify-start px-1 md:px-2 lg:max-w-[580px] lg:pt-3 xl:max-w-[610px]">
           <h1 className="max-w-[610px] text-[1.95rem] font-semibold leading-[1.02] tracking-[-0.05em] text-white sm:text-[2.3rem] md:text-[2.6rem] lg:text-[2.8rem] xl:text-[3rem] 2xl:text-[3.1rem]">
-            <span className="text-white">
-              {language === "es" ? "Hola, soy " : "Hello, this is "}
-            </span>
-
-            <span className="bg-gradient-to-r from-[#ff3cac] via-[#b65cff] to-[#20f0c7] bg-clip-text text-transparent">
-              {personalData.nameShort}
-            </span>
-
-            <br />
-
             <span className="bg-gradient-to-r from-[#ffffff] via-[#ff8bd1] to-[#ff3cac] bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(255,60,172,0.22)]">
-              Senior Front-End Engineer
+              {t.hero.role}
             </span>
 
             <br />
 
-            <span className="text-white">
-              {language === "es"
-                ? "especializado en experiencias web modernas con IA."
-                : "specialized in modern web experiences with AI."}
-            </span>
+            <span className="text-white">{t.hero.roleComplement}</span>
           </h1>
 
           <p className="mt-5 max-w-[600px] text-[0.96rem] leading-[1.8] text-[rgba(244,247,251,0.80)] sm:text-[0.98rem] lg:mt-5 lg:max-w-[550px] lg:text-[0.9rem] xl:max-w-[590px] xl:text-[0.94rem]">
-            {language === "es"
-              ? "Arquitecto y desarrollo aplicaciones web responsivas, escalables y seguras con React, Next.js y TypeScript, convirtiendo requerimientos complejos de producto y negocio en experiencias modernas, intuitivas y de alto impacto, respaldadas por una arquitectura UI/UX sólida, componentes reutilizables, buenas prácticas de seguridad y un enfoque de ingeniería centrado en performance."
-              : "I architect and build scalable, secure, high-performance web applications with React, Next.js, and TypeScript—turning complex product requirements into polished, conversion-driven user experiences through robust UI architecture, reusable design systems and components, security best practices, and performance-first engineering."}
+            {t.hero.tagline}
           </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-4"
+          >
+            <ul className="flex flex-wrap gap-x-20 gap-y-2 text-sm text-gray-300">
+              {t.hero.highlights.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-1 max-w-[380px]"
+                >
+                  <span className="text-green-400">✔</span>
+                  {item.replace("✔", "")}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
           <div className="mt-6 flex items-center gap-4">
             <Link
@@ -81,10 +84,11 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="mt-6 flex flex-nowrap items-center gap-3 sm:flex-wrap sm:gap-4">
+
             <Link
-              href="#contact"
-              className="group flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:border-[#20f0c7]/40 hover:bg-white/[0.08] hover:shadow-[0_0_24px_rgba(32,240,199,0.14)] sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]"
+              href="#projects"
+              className="group shrink-0 flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:border-[#20f0c7]/40 hover:bg-white/[0.08] hover:shadow-[0_0_24px_rgba(32,240,199,0.14)] sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]"
             >
               <span>{t.hero.contact}</span>
               <RiContactsFill size={14} />
@@ -93,14 +97,17 @@ export default function HeroSection() {
             <Link
               href={personalData.resume}
               target="_blank"
-              className="group rounded-full border border-[#7b2cff]/50 bg-gradient-to-r from-[#ff3cac] via-[#b14cff] to-[#7b2cff] p-[1px] shadow-[0_10px_30px_rgba(123,44,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(123,44,255,0.28)]"
+              className="group shrink-0 rounded-full border border-[#7b2cff]/50 bg-gradient-to-r from-[#ff3cac] via-[#b14cff] to-[#7b2cff] p-[1px] shadow-[0_10px_30px_rgba(123,44,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(123,44,255,0.28)]"
             >
-              <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]">
+              <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]">
                 <span>{t.hero.resume}</span>
                 <MdDownload size={14} />
               </span>
             </Link>
+
           </div>
+
+
         </div>
 
         <div className="order-2 relative mx-auto w-full max-w-full self-start overflow-hidden rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(8,17,51,0.96)_0%,rgba(7,15,42,0.98)_100%)] shadow-[0_24px_90px_rgba(0,0,0,0.34)] backdrop-blur-xl lg:-mt-3 xl:-mt-3">
@@ -109,10 +116,10 @@ export default function HeroSection() {
 
           <div className="flex items-center justify-between border-b border-white/10 px-4 py-4 sm:px-6 lg:px-4 xl:px-5">
             <div className="flex items-center gap-3">
-  <span className="h-3 w-3 rounded-full bg-[#20f0c7] shadow-[0_0_12px_rgba(32,240,199,0.45)] sm:h-3.5 sm:w-3.5" />
-  <span className="h-3 w-3 rounded-full bg-[#b14cff] shadow-[0_0_12px_rgba(177,76,255,0.45)] sm:h-3.5 sm:w-3.5" />
-  <span className="h-3 w-3 rounded-full bg-[#ff3cac] shadow-[0_0_12px_rgba(255,60,172,0.45)] sm:h-3.5 sm:w-3.5" />
-</div>
+              <span className="h-3 w-3 rounded-full bg-[#20f0c7] shadow-[0_0_12px_rgba(32,240,199,0.45)] sm:h-3.5 sm:w-3.5" />
+              <span className="h-3 w-3 rounded-full bg-[#b14cff] shadow-[0_0_12px_rgba(177,76,255,0.45)] sm:h-3.5 sm:w-3.5" />
+              <span className="h-3 w-3 rounded-full bg-[#ff3cac] shadow-[0_0_12px_rgba(255,60,172,0.45)] sm:h-3.5 sm:w-3.5" />
+            </div>
 
             <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[0.62rem] uppercase tracking-[0.18em] text-white/45">
               profile.tsx
@@ -136,7 +143,9 @@ export default function HeroSection() {
 
               <div className="ml-4 sm:ml-5 lg:ml-5">
                 <span className="mr-3 text-[#f8fafc]">role:</span>
-                <span className="text-[#ffd166]">'Senior Front-End Engineer'</span>
+                <span className="text-[#ffd166]">
+                  'Senior Front-End Engineer'
+                </span>
                 <span className="text-[#94a3b8]">,</span>
               </div>
 
@@ -149,9 +158,11 @@ export default function HeroSection() {
               <div className="ml-4 sm:ml-5 lg:ml-5">
                 <span className="mr-3 text-[#20f0c7]">focus:</span>
                 <span className="text-[#7dd3fc]">
-                  '{language === "es"
+                  '
+                  {language === "es"
                     ? "Front-End Architecture + IA"
-                    : "Front-End Architecture + AI"}'
+                    : "Front-End Architecture + AI"}
+                  '
                 </span>
                 <span className="text-[#94a3b8]">,</span>
               </div>
@@ -162,8 +173,8 @@ export default function HeroSection() {
                 <span className="text-[#ffd166] tracking-[-0.01em]">
                   'React', 'Next.js', 'TypeScript', 'JavaScript', 'REST APIs',
                   'GraphQL', 'Material UI', 'Tailwind CSS', 'Redux', 'Zustand',
-                  'Design Systems', 'Storybook', 'Responsive Design',
-                  'Testing Library', 'Node.js', 'Git', 'NPM'
+                  'Design Systems', 'Storybook', 'Responsive Design', 'Testing
+                  Library', 'Jest', 'Node.js', 'Git', 'NPM'
                 </span>
                 <span className="text-[#94a3b8]">]</span>
                 <span className="text-[#94a3b8]">,</span>
@@ -179,7 +190,9 @@ export default function HeroSection() {
 
               <div className="ml-4 sm:ml-5 lg:ml-5">
                 <span className="mr-3 text-[#f8fafc]">security:</span>
-                <span className="text-[#ffd166]">['JWT', 'OAuth2', 'RBAC']</span>
+                <span className="text-[#ffd166]">
+                  ['JWT', 'OAuth2', 'RBAC']
+                </span>
                 <span className="text-[#94a3b8]">,</span>
               </div>
 
@@ -221,7 +234,9 @@ export default function HeroSection() {
               </div>
 
               <div className="ml-4 sm:ml-5 lg:ml-5">
-                <span className="mr-3 text-[#f8fafc]">additionalKnowledge:</span>
+                <span className="mr-3 text-[#f8fafc]">
+                  additionalKnowledge:
+                </span>
                 <span className="text-[#ffd166] tracking-[-0.01em]">
                   ['.NET', 'C#', 'SQL', 'Docker', 'CI/CD', 'Azure', 'AWS']
                 </span>

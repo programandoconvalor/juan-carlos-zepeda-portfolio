@@ -16,17 +16,17 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("home");
   const { language, toggleLanguage, t, mounted } = useLanguage();
 
-  const brandName = useMemo(() => "JUAN CARLOS ZEPEDA IA", []);
+  const brandName = useMemo(() => "JUAN CARLOS ZEPEDA", []);
 
   const navItems: NavItem[] = useMemo(
     () => [
       { label: t.nav.about, href: "/#about", key: "about" },
       { label: t.nav.experience, href: "/#experience", key: "experience" },
       { label: t.nav.skills, href: "/#skills", key: "skills" },
-      { label: t.nav.education, href: "/#education", key: "education" },
-      { label: t.nav.blogs, href: "/blog", key: "blog" },
       { label: t.nav.projects, href: "/#projects", key: "projects" },
       { label: t.nav.assistant, href: "/#assistant", key: "assistant" },
+      { label: t.nav.education, href: "/#education", key: "education" },
+      { label: t.nav.contact, href: "/#contact", key: "contact" },
     ],
     [t],
   );
@@ -38,9 +38,10 @@ export default function Navbar() {
         "about",
         "experience",
         "skills",
-        "education",
         "projects",
+        "education",
         "assistant",
+        "contact",
       ];
       const scrollPosition = window.scrollY + 140;
 

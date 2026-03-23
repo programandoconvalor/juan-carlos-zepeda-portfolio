@@ -1,6 +1,6 @@
 // @ts-nocheck
 export const personalData = {
-  name: "JUAN CARLOS ZEPEDA IA",
+  name: "JUAN CARLOS ZEPEDA",
   nameShort: "Juan Carlos",
   profile: '/juancarloszepeda-profile.png',
   designation: "Front-End Engineer SR.",

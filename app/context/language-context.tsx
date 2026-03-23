@@ -11,7 +11,7 @@ export type Dictionary = {
     experience: string;
     skills: string;
     education: string;
-    blogs: string;
+    contact: string;
     projects: string;
     assistant: string;
   };
@@ -20,8 +20,10 @@ export type Dictionary = {
     name: string;
     role: string;
     tagline: string;
+    roleComplement: string;
     contact: string;
     resume: string;
+    highlights: string[];
   };
   about: {
     title: string;
@@ -50,21 +52,29 @@ const dictionaries: Record<Language, Dictionary> = {
   es: {
     nav: {
       home: "INICIO",
-      about: "ACERCA",
+      about: "SOBRE MÍ",
       experience: "EXPERIENCIA",
       skills: "HABILIDADES",
       education: "EDUCACIÓN",
-      blogs: "BLOGS",
+      contact: "CONTACTO",
       projects: "PROYECTOS",
       assistant: "IA",
     },
     hero: {
       greeting: "Hola, soy",
       name: "Juan Carlos Zepeda IA",
-      role: "Senior Front-End Engineer",
-      tagline: "especializado en experiencias web modernas con IA.",
-      contact: "Contáctame",
-      resume: "Ver CV",
+      role: "Ingeniero Front-End Senior",
+      roleComplement:
+        "especializado en crear experiencias web modernas, rápidas y escalables + IA.",
+      tagline:
+        "Construyo soluciones web escalables centradas en la experiencia del usuario que generan impacto real y alto valor en producción.",
+      contact: "Ver Proyectos",
+      resume: "Descargar CV",
+      highlights: [
+        "✔ Aplicaciones con React, Next.js, TypeScript & IA",
+        "✔ UI/UX modernas y responsivas",
+        "✔ Componentes reutilizables y código limpio",
+      ],
     },
     about: {
       title: "¿Quién soy?",
@@ -73,11 +83,14 @@ const dictionaries: Record<Language, Dictionary> = {
       description:
         "Amplia experiencia en la creación de aplicaciones web responsivas, escalables y orientadas al negocio, utilizando React, Next.js y los ecosistemas modernos de JavaScript.\n\nMe especializo en diseño de interfaces y componentes de alto impacto, integración de API, mejora de la experiencia del usuario y el aprovechamiento de herramientas de IA para fortalecer performance, escalabilidad y calidad del producto.",
       cardTitle1: "UI/UX con impacto",
-      cardText1: "Interfaces limpias, modernas y pensadas para conversión y experiencia real de usuario.",
+      cardText1:
+        "Interfaces limpias, modernas y pensadas para conversión y experiencia real de usuario.",
       cardTitle2: "Arquitectura escalable",
-      cardText2: "Componentes reutilizables, buenas prácticas y enfoque sólido en mantenibilidad.",
+      cardText2:
+        "Componentes reutilizables, buenas prácticas y enfoque sólido en mantenibilidad.",
       cardTitle3: "IA aplicada",
-      cardText3: "Uso herramientas de IA para fortalecer performance, escalabilidad y calidad del producto.",
+      cardText3:
+        "Uso herramientas de IA para fortalecer performance, escalabilidad y calidad del producto.",
     },
     assistant: {
       title: "Asistente IA",
@@ -86,9 +99,11 @@ const dictionaries: Record<Language, Dictionary> = {
       send: "Enviar",
       thinking: "Pensando...",
       error: "No pude responder en este momento.",
-      welcome: "Hola, soy el asistente de Juan Carlos Zepeda IA. ¿Qué te gustaría saber?",
+      welcome:
+        "Hola, soy el asistente de Juan Carlos Zepeda IA. ¿Qué te gustaría saber?",
     },
   },
+
   en: {
     nav: {
       home: "HOME",
@@ -96,7 +111,7 @@ const dictionaries: Record<Language, Dictionary> = {
       experience: "EXPERIENCE",
       skills: "SKILLS",
       education: "EDUCATION",
-      blogs: "BLOGS",
+      contact: "CONTACT",
       projects: "PROJECTS",
       assistant: "AI",
     },
@@ -104,9 +119,17 @@ const dictionaries: Record<Language, Dictionary> = {
       greeting: "Hello, I’m",
       name: "Juan Carlos Zepeda IA",
       role: "Senior Front-End Engineer",
-      tagline: "specialized in modern web experiences with AI.",
-      contact: "Contact me",
-      resume: "View Resume",
+      roleComplement:
+        "specialized in building modern, fast, and scalable web experiences with AI.",
+      tagline:
+        "I build scalable web solutions focused on user experience that deliver real impact and high value in production.",
+      contact: "View Projects",
+      resume: "Download Resume",
+      highlights: [
+        "✔ Applications with React, Next.js, TypeScript & AI",
+        "✔ Modern and responsive UI/UX experiences",
+        "✔ Reusable components and clean code",
+      ],
     },
     about: {
       title: "Who am I?",
@@ -115,11 +138,14 @@ const dictionaries: Record<Language, Dictionary> = {
       description:
         "Extensive experience building responsive, scalable, business-oriented web applications using React, Next.js, and modern JavaScript ecosystems.\n\nI specialize in designing high-impact interfaces and components, API integration, improving user experience, and leveraging AI tools to strengthen performance, scalability, and product quality.",
       cardTitle1: "Impactful UI/UX",
-      cardText1: "Clean, modern interfaces designed for conversion and real user experience.",
+      cardText1:
+        "Clean, modern interfaces designed for conversion and real user experience.",
       cardTitle2: "Scalable architecture",
-      cardText2: "Reusable components, solid practices, and a strong maintainability mindset.",
+      cardText2:
+        "Reusable components, solid practices, and a strong maintainability mindset.",
       cardTitle3: "Applied AI",
-      cardText3: "I use AI tools to strengthen performance, scalability, and product quality.",
+      cardText3:
+        "I use AI tools to strengthen performance, scalability, and product quality.",
     },
     assistant: {
       title: "AI Assistant",
@@ -128,7 +154,8 @@ const dictionaries: Record<Language, Dictionary> = {
       send: "Send",
       thinking: "Thinking...",
       error: "I could not answer right now.",
-      welcome: "Hi, I am Juan Carlos Zepeda IA assistant. What would you like to know?",
+      welcome:
+        "Hi, I am Juan Carlos Zepeda IA assistant. What would you like to know?",
     },
   },
 };
@@ -176,10 +203,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       mounted,
       t: dictionaries[language],
     }),
-    [language, mounted]
+    [language, mounted],
   );
 
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+  return (
+    <LanguageContext.Provider value={value}>
+      {mounted ? children : null}
+    </LanguageContext.Provider>
+  );
 }
 
 export function useLanguage(): LanguageContextType {

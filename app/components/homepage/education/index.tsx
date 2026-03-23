@@ -15,7 +15,7 @@ function Education() {
   const lang = language === "en" ? "en" : "es";
 
   return (
-    <section className="relative z-50 my-16 lg:my-28 border-t border-[#25213b]">
+    <section  id="education" className="relative z-50 my-16 lg:my-28 border-t border-[#25213b]">
 
       <Image
         src="/section.svg"

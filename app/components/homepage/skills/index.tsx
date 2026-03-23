@@ -68,7 +68,7 @@ type Skill = {
 
 const content = {
   es: {
-    badge: "Skills",
+    badge: "Habilidades",
     title: "Senior Frontend Developer",
     subtitle:
       "Stack orientado a frontend moderno, experiencia de usuario, performance, SEO, analítica, testing e integración de productos digitales con IA.",

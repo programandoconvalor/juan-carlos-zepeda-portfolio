@@ -9,7 +9,7 @@ function ContactSection() {
   const lang = language === "en" ? "en" : "es";
 
   return (
-    <section className="my-20 relative text-white">
+    <section id="contact" className="my-20 relative text-white">
 
       {/* Title */}
       <div className="text-center mb-12">

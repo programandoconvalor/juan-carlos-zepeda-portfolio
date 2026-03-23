@@ -80,7 +80,7 @@ export default function AssistantSection() {
   }
 
   return (
-    <section className="relative my-16 overflow-hidden rounded-[32px] border border-white/10 bg-[#0b1022] p-6 md:p-10 shadow-[0_0_60px_rgba(124,58,237,0.15)]">
+    <section id="assistant" className="relative my-16 overflow-hidden rounded-[32px] border border-white/10 bg-[#0b1022] p-6 md:p-10 shadow-[0_0_60px_rgba(124,58,237,0.15)]">
 
       {/* Glow background */}
       <div className="absolute inset-0 pointer-events-none">
