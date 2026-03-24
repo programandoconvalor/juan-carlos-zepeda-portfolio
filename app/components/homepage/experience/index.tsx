@@ -103,7 +103,7 @@ const experienceContent = {
       },
       {
         label: "CI/CD",
-        value: "GitHub / Azure",
+        value: "GitHub / AWS",
         icon: "delivery",
         caption: "Pipelines, YAML workflows, ambientes QA, Staging y Main con despliegues automáticos.",
       },
@@ -190,7 +190,7 @@ const experienceContent = {
         id: 2,
         period: "Jul 2018 - Ene 2022",
         role: "Senior Front-End Engineer",
-        company: "AXA Assistance México",
+        company: "AXA Assistance",
         type: "Enterprise · Remote / Hybrid",
         summary:
           "Desarrollo y modernización de soluciones front-end enterprise con React.js, Next.js y TypeScript para productos del sector asegurador. Participación en integración de APIs externas, refactorización de sistemas legacy, migración hacia Azure y construcción de interfaces reutilizables orientadas a performance, mantenibilidad y experiencia de usuario.",
@@ -346,7 +346,7 @@ const experienceContent = {
       },
       {
         label: "CI/CD",
-        value: "GitHub / Azure",
+        value: "GitHub / AWS",
         icon: "delivery",
         caption: "Pipelines, YAML workflows, QA, Staging, and Main environments with automated delivery.",
       },
@@ -433,7 +433,7 @@ const experienceContent = {
         id: 2,
         period: "Jul 2018 - Jan 2022",
         role: "Senior Front-End Engineer",
-        company: "AXA Assistance México",
+        company: "AXA Assistance",
         type: "Enterprise · Remote / Hybrid",
         summary:
           "Built and modernized enterprise front-end solutions with React.js, Next.js, and TypeScript for insurance products. Contributed to third-party API integrations, legacy refactoring, Azure migration, and reusable UI development with strong focus on performance, maintainability, and user experience.",

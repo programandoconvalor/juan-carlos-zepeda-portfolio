@@ -149,13 +149,13 @@ const skills: Skill[] = [
   { key: "git", name: { es: "Git", en: "Git" }, icon: <FaGitAlt />, level: 93, category: "cloud" },
   { key: "docker", name: { es: "Docker", en: "Docker" }, icon: <FaDocker />, level: 70, category: "cloud" },
   { key: "aws", name: { es: "AWS", en: "AWS" }, icon: <FaAws />, level: 60, category: "cloud" },
-  { key: "firebase", name: { es: "Firebase", en: "Firebase" }, icon: <SiFirebase />, level: 75, category: "cloud" },
+  { key: "firebase", name: { es: "Firebase", en: "Firebase" }, icon: <SiFirebase />, level: 50, category: "cloud" },
   { key: "vercel", name: { es: "Vercel", en: "Vercel" }, icon: <SiVercel />, level: 88, category: "cloud" },
 
   { key: "jest", name: { es: "Jest", en: "Jest" }, icon: <SiJest />, level: 80, category: "quality" },
   { key: "cypress", name: { es: "Cypress", en: "Cypress" }, icon: <SiCypress />, level: 78, category: "quality" },
-  { key: "storybook", name: { es: "Storybook", en: "Storybook" }, icon: <SiStorybook />, level: 82, category: "quality" },
-  { key: "debugging", name: { es: "Depuración Frontend", en: "Front-end Debugging" }, icon: <FaTools />, level: 88, category: "quality" },
+  { key: "storybook", name: { es: "Storybook", en: "Storybook" }, icon: <SiStorybook />, level: 70, category: "quality" },
+  { key: "debugging", name: { es: "Depuración Frontend", en: "Front-end Debugging" }, icon: <FaTools />, level: 90, category: "quality" },
 
   { key: "seo", name: { es: "SEO", en: "SEO" }, icon: <SiGoogleanalytics />, level: 88, category: "marketingCms" },
   { key: "performance", name: { es: "Optimización de Performance", en: "Performance Optimization" }, icon: <SiGoogleanalytics />, level: 90, category: "marketingCms" },
@@ -165,8 +165,7 @@ const skills: Skill[] = [
   { key: "webflow", name: { es: "Webflow", en: "Webflow" }, icon: <SiWebflow />, level: 76, category: "marketingCms" },
 
   { key: "openai", name: { es: "OpenAI API", en: "OpenAI API" }, icon: <SiOpenai />, level: 76, category: "ai" },
-  { key: "copilot", name: { es: "GitHub Copilot", en: "GitHub Copilot" }, icon: <SiGithub />, level: 85, category: "ai" },
-  { key: "ai-ui", name: { es: "Integración UI con IA", en: "AI UI Integration" }, icon: <FaRobot />, level: 83, category: "ai" },
+  { key: "copilot", name: { es: "GitHub Copilot", en: "GitHub Copilot" }, icon: <SiGithub />, level: 75, category: "ai" },
   { key: "ai-agents", name: { es: "AI Agents", en: "AI Agents" }, icon: <FaRobot />, level: 74, category: "ai" },
   { key: "chatbots", name: { es: "Chatbots", en: "Chatbots" }, icon: <FaComments />, level: 80, category: "ai" },
 ];
