@@ -1,22 +1,22 @@
-import { personalData } from "@/utils/data/personal-data";
+"use client";
+
+import { useLanguage } from "../context/language-context";
+import { FiHeart } from "react-icons/fi";
 
 export default function Footer() {
-  const language = "en";
+  const { t, language } = useLanguage();
 
   return (
-    <div className="relative border-t border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text)]">
-      <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-8 text-center md:flex-row md:items-center md:justify-between md:text-left">
-        <p className="text-sm text-[var(--color-text-soft)]">
-          © Developer Portfolio by{" "}
-          <span className="font-semibold text-[var(--color-title)]">
-            {personalData.name}
-          </span>
-        </p>
+    <footer className="w-full py-6 text-center text-sm text-gray-400">
+      <p className="flex items-center justify-center gap-2">
+{t.footer.madeWith}{" "}
+       {"<"}<FiHeart className="text-pink-500 animate-pulse" />{">"}{" "}
 
-        <div className="text-sm text-[var(--color-accent)]">
-          React · Next.js · TypeScript · AI · {language.toUpperCase()}
-        </div>
-      </div>
-    </div>
+        {t.footer.by}{" "}
+        <span className="font-semibold text-white">
+          {t.footer.copyright}
+        </span>
+      </p>
+    </footer>
   );
 }

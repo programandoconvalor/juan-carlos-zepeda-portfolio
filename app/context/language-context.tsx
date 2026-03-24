@@ -46,6 +46,11 @@ export type Dictionary = {
     error: string;
     welcome: string;
   };
+  footer: {
+      madeWith: string;
+      by: string;
+    copyright: string;
+  };
 };
 
 const dictionaries: Record<Language, Dictionary> = {
@@ -102,6 +107,11 @@ const dictionaries: Record<Language, Dictionary> = {
       welcome:
         "Hola, soy el asistente de Juan Carlos Zepeda IA. ¿Qué te gustaría saber?",
     },
+    footer:{ 
+      madeWith: "Hecho con", 
+      by: "por",
+      copyright: "Juan Carlos Zepeda © 2026."
+    }
   },
 
   en: {
@@ -157,6 +167,11 @@ const dictionaries: Record<Language, Dictionary> = {
       welcome:
         "Hi, I am Juan Carlos Zepeda IA assistant. What would you like to know?",
     },
+    footer:{
+      madeWith: "Made with",
+      by: "by",
+      copyright: "Juan Carlos Zepeda © 2026."
+    }
   },
 };
 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiCheckCircle } from "react-icons/fi";
+import { FiCheckCircle, FiSend } from "react-icons/fi";
 import { useLanguage } from "@/app/context/language-context";
 import axios from "axios";
 
@@ -150,7 +150,7 @@ export default function ContactForm() {
       </AnimatePresence>
 
       <h3 className="text-xl font-semibold text-white mb-6">
-        {lang === "es" ? "Contáctame" : "Contact Me"}
+        {lang === "es" ? "Contáctame y envíame WhatsApp" : "Contact Me and Send WhatsApp"}
       </h3>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -211,18 +211,30 @@ export default function ContactForm() {
         </div>
 
         {/* BUTTON */}
-        <motion.button
-          disabled={!isValid || loading}
-          className={`mt-2 rounded-2xl px-6 py-3 text-white font-semibold transition
-          ${
-            isValid
-              ? "bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:opacity-90"
-              : "bg-gray-600 cursor-not-allowed"
-          }`}
-        >
-          {loading ? "..." : lang === "es" ? "Enviar" : "Send"}
-          
-        </motion.button>
+      
+
+<div className="relative">
+  
+
+  <motion.button
+  type="submit"
+  disabled={!isValid || loading}
+  className={`absolute right-4 bottom-6 p-4 top-1/2 -translate-y-1/2 p-3 rounded-xl text-white transition flex items-center justify-center
+  ${
+    isValid && !loading
+      ? "bg-gradient-to-r from-purple-500 to-indigo-500 hover:scale-105 shadow-lg shadow-purple-500/30"
+      : "bg-gray-600 cursor-not-allowed"
+  }`}
+>
+  {loading ? (
+    "..."
+  ) : (
+    <FiSend className="text-white text-lg" />
+  )}
+</motion.button>
+</div>
+
+
       </form>
     </motion.div>
   );

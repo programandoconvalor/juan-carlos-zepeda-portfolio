@@ -2,6 +2,9 @@
 
 import ContactForm from "./contact-form";
 import { useLanguage } from "@/app/context/language-context";
+import { personalData } from "@/utils/data/personal-data";
+import Link from "next/link";
+import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 function ContactSection() {
@@ -10,7 +13,6 @@ function ContactSection() {
 
   return (
     <section id="contact" className="my-20 relative text-white">
-
       {/* Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">
@@ -18,50 +20,42 @@ function ContactSection() {
         </h2>
         <p className="text-gray-400 mt-2">
           {lang === "es"
-            ? "Disponible para oportunidades y proyectos"
-            : "Available for opportunities and projects"}
+            ? "Disponible para oportunidades y proyectos 100% remotos"
+            : "Available for opportunities and projects 100% remote"}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
         {/* FORM */}
         <ContactForm />
 
         {/* RIGHT SIDE */}
         <div className="flex flex-col items-center gap-8">
-
           {/* Contact Info */}
           <div className="text-center">
-            <p className="text-lg font-medium">
-              ingenierozepeda@gmail.com
-            </p>
-            <p className="text-gray-400">
-              Toluca, México
-            </p>
+            <p className="text-lg font-medium">ingenierozepeda@gmail.com</p>
+            <p className="text-gray-400">Toluca, México</p>
           </div>
 
           {/* SOCIAL */}
-          <div className="flex gap-6">
-
-            {/* LinkedIn */}
-            <a
-              href="https://linkedin.com"
+          <div className="mt-6 flex items-center gap-4">
+            <Link
+              href={personalData.linkedIn}
               target="_blank"
-              className="w-14 h-14 flex items-center justify-center rounded-full border border-white/10 bg-white/5 hover:bg-[#0A66C2] transition-all hover:scale-110"
+              aria-label="LinkedIn"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#20f0c7]/50 hover:text-[#20f0c7] hover:shadow-[0_0_22px_rgba(32,240,199,0.18)]"
             >
-              <FaLinkedin size={22} />
-            </a>
+              <BsLinkedin size={22} />
+            </Link>
 
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5217227914217"
+            <Link
+              href={personalData.phone}
               target="_blank"
-              className="w-14 h-14 flex items-center justify-center rounded-full border border-green-400/30 bg-green-500/10 hover:bg-green-500 transition-all hover:scale-110"
+              aria-label="WhatsApp"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#22c55e]/40 bg-[rgba(34,197,94,0.12)] text-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:border-[#22c55e] hover:bg-[rgba(34,197,94,0.18)] hover:text-[#4ade80] hover:shadow-[0_0_24px_rgba(34,197,94,0.22)]"
             >
-              <FaWhatsapp size={22} />
-            </a>
-
+              <BsWhatsapp size={22} />
+            </Link>
           </div>
         </div>
       </div>
