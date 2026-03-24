@@ -52,7 +52,7 @@ const experienceContent = {
     titleStart: "Experiencia enfocada en",
     titleHighlight: "Front-End de alto impacto",
     description:
-      "Más de 5 años desarrollando aplicaciones web con React.js, Next.js y TypeScript para productos enterprise. Mi enfoque está en arquitectura front-end, UX/UI, performance, testing, autenticación segura, integración con APIs modernas y despliegues automatizados en cloud.",
+      "Más de 8 años desarrollando aplicaciones web con React.js, Next.js y TypeScript para productos enterprise. Mi enfoque está en arquitectura front-end, UX/UI, performance, testing, autenticación segura, integración con APIs modernas y despliegues automatizados en cloud.",
     stackLabel: "Stack relevante",
     projectsLabel: "Proyectos destacados",
     strengthsLabel: "Fortalezas clave",
@@ -295,7 +295,7 @@ const experienceContent = {
     titleStart: "Experience focused on",
     titleHighlight: "high-impact Front-End engineering",
     description:
-      "5+ years building web applications with React.js, Next.js, and TypeScript for enterprise products. My focus is front-end architecture, UX/UI, performance, testing, secure authentication, modern API integration, and automated cloud delivery.",
+      "8+ years building web applications with React.js, Next.js, and TypeScript for enterprise products. My focus is front-end architecture, UX/UI, performance, testing, secure authentication, modern API integration, and automated cloud delivery.",
     stackLabel: "Relevant stack",
     projectsLabel: "Highlighted projects",
     strengthsLabel: "Core strengths",
