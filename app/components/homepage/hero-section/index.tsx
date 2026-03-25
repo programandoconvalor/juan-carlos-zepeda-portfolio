@@ -75,7 +75,7 @@ export default function HeroSection() {
             </Link>
 
             <Link
-              href={personalData.phone}
+              href={personalData.meWhatsApp}
               target="_blank"
               aria-label="WhatsApp"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-[#22c55e]/40 bg-[rgba(34,197,94,0.12)] text-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:border-[#22c55e] hover:bg-[rgba(34,197,94,0.18)] hover:text-[#4ade80] hover:shadow-[0_0_24px_rgba(34,197,94,0.22)]"
