@@ -189,7 +189,7 @@ const experienceContent = {
       {
         id: 2,
         period: "Jul 2018 - Ene 2022",
-        role: "Senior Front-End Engineer",
+        role: "Senior Front-End Developer",
         company: "AXA Assistance",
         type: "Enterprise · Remote / Hybrid",
         summary:
@@ -378,7 +378,7 @@ const experienceContent = {
     roles: [
       {
         id: 1,
-        period: "Feb 2022 - Jan 2025",
+        period: "Feb 2022 - Mar 2026",
         role: "Senior Front-End Engineer",
         company: "Afore Principal",
         type: "Remote Freelancer · Fintech / Enterprise",

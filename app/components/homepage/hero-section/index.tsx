@@ -94,16 +94,24 @@ export default function HeroSection() {
               <RiContactsFill size={14} />
             </Link>
 
-            <Link
-              href={personalData.resume}
-              target="_blank"
-              className="group shrink-0 rounded-full border border-[#7b2cff]/50 bg-gradient-to-r from-[#ff3cac] via-[#b14cff] to-[#7b2cff] p-[1px] shadow-[0_10px_30px_rgba(123,44,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(123,44,255,0.28)]"
-            >
-              <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]">
-                <span>{t.hero.resume}</span>
-                <MdDownload size={14} />
-              </span>
-            </Link>
+            <a
+  href={
+    language === "es"
+      ? "/pdf/Juan_Carlos_Zepeda_Senior_Frontend_ES.pdf"
+      : "/pdf/Juan_Carlos_Zepeda_Senior_Frontend_EN.pdf"
+  }
+  download={
+    language === "es"
+      ? "Juan_Carlos_Zepeda_CV_ES.pdf"
+      : "Juan_Carlos_Zepeda_CV_EN.pdf"
+  }
+  className="group shrink-0 rounded-full border border-[#7b2cff]/50 bg-gradient-to-r from-[#ff3cac] via-[#b14cff] to-[#7b2cff] p-[1px] shadow-[0_10px_30px_rgba(123,44,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(123,44,255,0.28)]"
+>
+  <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]">
+    <span>{t.hero.resume}</span>
+    <MdDownload size={14} />
+  </span>
+</a>
 
           </div>
 
