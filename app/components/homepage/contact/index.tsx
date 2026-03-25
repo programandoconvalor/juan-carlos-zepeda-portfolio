@@ -35,27 +35,12 @@ function ContactSection() {
           <div className="text-center">
             <p className="text-lg font-medium">ingenierozepeda@gmail.com</p>
             <p className="text-gray-400">Toluca, México</p>
+            <p className="text-gray-400">Whatsapp: +52 1 722 791 4217</p>
           </div>
 
           {/* SOCIAL */}
           <div className="mt-6 flex items-center gap-4">
-            <Link
-              href={personalData.linkedIn}
-              target="_blank"
-              aria-label="LinkedIn"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#20f0c7]/50 hover:text-[#20f0c7] hover:shadow-[0_0_22px_rgba(32,240,199,0.18)]"
-            >
-              <BsLinkedin size={22} />
-            </Link>
-
-            <Link
-              href={personalData.phone}
-              target="_blank"
-              aria-label="WhatsApp"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#22c55e]/40 bg-[rgba(34,197,94,0.12)] text-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:border-[#22c55e] hover:bg-[rgba(34,197,94,0.18)] hover:text-[#4ade80] hover:shadow-[0_0_24px_rgba(34,197,94,0.22)]"
-            >
-              <BsWhatsapp size={22} />
-            </Link>
+         
           </div>
         </div>
       </div>
