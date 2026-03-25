@@ -96,9 +96,19 @@ export default function Navbar() {
             closeMenu();
           }}
         >
-          <span className="block whitespace-nowrap text-[1.05rem] font-extrabold uppercase tracking-[-0.03em] xs:text-[1.12rem] sm:text-2xl lg:text-3xl">
-            {brandName}
-          </span>
+<span className="block whitespace-nowrap font-extrabold tracking-[-0.03em]">
+  {/* Mobile */}
+  <span className="block uppercase text-[1.05rem] xs:text-[1.12rem] sm:hidden">
+    Juan Carlos
+  </span>
+
+  {/* Desktop */}
+  <span className="hidden uppercase sm:block sm:text-2xl lg:text-3xl">
+    {brandName}
+  </span>
+</span>
+
+
           <span
             className={`mt-2 block h-[2px] w-full origin-left rounded-full bg-gradient-to-r from-[var(--color-brand)] via-[var(--color-brand-strong)] to-[var(--color-accent)] transition-transform duration-300 ${
               activeSection === "home"

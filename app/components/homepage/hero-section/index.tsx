@@ -87,7 +87,7 @@ export default function HeroSection() {
           <div className="mt-6 flex flex-nowrap items-center gap-3 sm:flex-wrap sm:gap-4">
             <Link
               href="#projects"
-              className="group shrink-0 flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:border-[#20f0c7]/40 hover:bg-white/[0.08] hover:shadow-[0_0_24px_rgba(32,240,199,0.14)] sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]"
+              className="group shrink-0 flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-2 py-2 text-[0.60rem] font-semibold uppercase tracking-[0.10em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:gap-3 hover:border-[#20f0c7]/40 hover:bg-white/[0.08] hover:shadow-[0_0_24px_rgba(32,240,199,0.14)] sm:px-6 sm:py-3.5 md:px-7 md:text-[0.69rem]"
             >
               <span>{t.hero.contact}</span>
               <RiContactsFill size={14} />
@@ -106,7 +106,7 @@ export default function HeroSection() {
               }
               className="group shrink-0 rounded-full border border-[#7b2cff]/50 bg-gradient-to-r from-[#ff3cac] via-[#b14cff] to-[#7b2cff] p-[1px] shadow-[0_10px_30px_rgba(123,44,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(123,44,255,0.28)]"
             >
-              <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.79rem]">
+              <span className="flex items-center gap-2 rounded-full bg-[linear-gradient(180deg,rgba(8,17,51,0.92)_0%,rgba(7,15,42,0.96)_100%)] px-2 py-2 text-[0.60rem] font-semibold uppercase tracking-[0.10em] text-white transition-all duration-300 group-hover:gap-3 sm:px-6 sm:py-3.5 md:px-7 md:text-[0.69rem]">
                 <span>{t.hero.resume}</span>
                 <MdDownload size={14} />
               </span>
