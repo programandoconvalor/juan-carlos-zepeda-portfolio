@@ -8,7 +8,7 @@ export const personalData = {
   email: 'ingenierozepeda@gmail.com',
   phone: '+52 1 722 791 4217',
   address: 'Toluca, Estado de México, México',
-  github: '',
+  github: 'https://github.com/programandoconvalor',
   facebook: '',
   linkedIn: 'https://www.linkedin.com/in/juan-carlos-zepeda-bb25151b5/',
   twitter: '',

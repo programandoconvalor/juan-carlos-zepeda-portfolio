@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 
@@ -81,6 +82,16 @@ export default function HeroSection() {
               className="flex h-11 w-11 items-center justify-center rounded-full border border-[#22c55e]/40 bg-[rgba(34,197,94,0.12)] text-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.10)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:border-[#22c55e] hover:bg-[rgba(34,197,94,0.18)] hover:text-[#4ade80] hover:shadow-[0_0_24px_rgba(34,197,94,0.22)]"
             >
               <BsWhatsapp size={22} />
+            </Link>
+
+            <Link
+              href={personalData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#20f0c7]/50 hover:text-[#20f0c7] hover:shadow-[0_0_22px_rgba(32,240,199,0.18)]"
+            >
+              <FaGithub size={22} />
             </Link>
           </div>
 
@@ -175,7 +186,7 @@ export default function HeroSection() {
                 <span className="mr-2 text-[#20f0c7]">skills:</span>
                 <span className="text-[#94a3b8]">[</span>
                 <span className="text-[#ffd166] tracking-[-0.01em]">
-                  'React', 'Next.js', 'TypeScript', 'JavaScript', 'REST APIs',
+                  'React', 'Next.js', 'TypeScript','Angular 21', 'JavaScript', 'REST APIs',
                   'GraphQL', 'Material UI', 'Tailwind CSS', 'Redux', 'Zustand',
                   'Design Systems', 'Storybook', 'Responsive Design', 'Testing
                   Library', 'Jest', 'Node.js', 'Git', 'NPM'
@@ -187,7 +198,7 @@ export default function HeroSection() {
               <div className="ml-4 sm:ml-5 lg:ml-5">
                 <span className="mr-3 text-[#f8fafc]">architecture:</span>
                 <span className="text-[#ffd166]">
-                  ['App Router', 'Server Actions', 'SSR', 'ISR']
+                  ['App Router', 'Server Actions', 'SSR', 'ISR','micro-frontends', 'module federation', 'monorepos']
                 </span>
                 <span className="text-[#94a3b8]">,</span>
               </div>
