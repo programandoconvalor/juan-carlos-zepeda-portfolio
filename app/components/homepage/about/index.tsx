@@ -34,7 +34,7 @@ export default function AboutSection() {
               </span>
             </div>
 
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="whitespace-pre-line text-justify text-sm md:text-base leading-relaxed">
               {t.about.description}
             </p>
 
@@ -43,7 +43,7 @@ export default function AboutSection() {
                 <h3 className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
                   {t.about.cardTitle1}
                 </h3>
-                <p className="text-center text-sm leading-7 text-[var(--color-text-soft)]">
+                <p className="text-justify text-sm leading-7 text-[var(--color-text-soft)]">
                   {t.about.cardText1}
                 </p>
               </div>
@@ -52,7 +52,7 @@ export default function AboutSection() {
                 <h3 className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[#52c7ff]">
                   {t.about.cardTitle2}
                 </h3>
-                <p className="text-center text-sm leading-7 text-[var(--color-text-soft)]">
+                <p className="text-justify text-sm leading-7 text-[var(--color-text-soft)]">
                   {t.about.cardText2}
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AboutSection() {
                 <h3 className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-hero-code-string)]">
                   {t.about.cardTitle3}
                 </h3>
-                <p className="text-center text-sm leading-7 text-[var(--color-text-soft)]">
+                <p className="text-justify text-sm leading-7 text-[var(--color-text-soft)]">
                   {t.about.cardText3}
                 </p>
               </div>

@@ -8,15 +8,15 @@ import { useLanguage } from "../../../context/language-context";
 const sectionCopy = {
   es: {
     badge: "Proyectos",
-    title: "Proyectos destacados",
+    title: "Casos de estudio",
     subtitle:
-      "Una selección ordenada de proyectos alineados con mi trayectoria en frontend, producto digital, performance, CMS, analítica e integración de experiencias con IA.",
+      "Casos de estudio basados en contribuciones profesionales documentadas en Afore Principal y AXA Assistance.",
   },
   en: {
     badge: "Projects",
-    title: "Featured projects",
+    title: "Case Studies",
     subtitle:
-      "A curated selection of projects aligned with my background in frontend, digital product, performance, CMS, analytics, and AI-powered experiences.",
+      "Case studies based on professional contributions documented at Afore Principal and AXA Assistance.",
   },
 };
 
@@ -68,7 +68,7 @@ const Projects = () => {
                 </h2>
               </div>
 
-              <p className="max-w-2xl text-sm leading-relaxed text-white/65 md:ml-auto md:text-base">
+              <p className="max-w-2xl text-justify text-sm leading-relaxed text-white/65 md:ml-auto md:text-base">
                 {t.subtitle}
               </p>
             </div>

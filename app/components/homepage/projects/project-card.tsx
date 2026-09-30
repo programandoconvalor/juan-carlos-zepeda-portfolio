@@ -6,15 +6,15 @@ import { useLanguage } from "../../../context/language-context";
 
 const labels = {
   es: {
-    tools: "tools",
-    role: "miRol",
-    description: "descripcion",
+    tools: "tecnologías",
+    role: "rol profesional",
+    description: "descripción",
     live: "Ver proyecto",
     code: "Código",
   },
   en: {
-    tools: "tools",
-    role: "myRole",
+    tools: "technologies",
+    role: "professionalRole",
     description: "description",
     live: "View project",
     code: "Code",
@@ -109,7 +109,7 @@ const ProjectCard = ({ project }) => {
 
             <p className="whitespace-pre-wrap break-words text-white/85">
               <span className="text-white">{t.description}:</span>{" "}
-              <span className="text-[#14d8ff]">{projectDescription}</span>
+              <span className="block text-justify text-[#14d8ff]">{projectDescription}</span>
             </p>
           </div>
 

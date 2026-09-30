@@ -9,14 +9,11 @@ import {
   FaNodeJs,
   FaHtml5,
   FaCss3Alt,
-  FaVuejs,
   FaAngular,
   FaFigma,
   FaRobot,
-  FaWordpress,
   FaCodeBranch,
   FaTools,
-  FaComments,
   FaProjectDiagram,
 } from "react-icons/fa";
 import {
@@ -35,10 +32,17 @@ import {
   SiStorybook,
   SiRedux,
   SiJquery,
-  SiWebflow,
-  SiGoogleanalytics,
   SiSass,
   SiBootstrap,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiMicrosoftsqlserver,
+  SiGithubactions,
+  SiAxios,
+  SiDrupal,
+  SiShopify,
 } from "react-icons/si";
 
 import { useLanguage } from "../../../context/language-context";
@@ -47,13 +51,13 @@ type Lang = "es" | "en";
 
 type Category =
   | "all"
-  | "core"
-  | "frameworks"
-  | "ui"
-  | "cloud"
-  | "ai"
-  | "quality"
-  | "marketingCms";
+  | "frontend"
+  | "backend"
+  | "cloudDevops"
+  | "databases"
+  | "aiAutomation"
+  | "architecture"
+  | "tools";
 
 type Skill = {
   key: string;
@@ -62,112 +66,170 @@ type Skill = {
     en: string;
   };
   icon: React.ReactNode;
-  level: number;
   category: Exclude<Category, "all">;
 };
 
 const content = {
   es: {
     badge: "Habilidades",
-    title: "Senior Frontend Developer",
-    subtitle:
-      "Stack orientado a frontend moderno, experiencia de usuario, performance, SEO, analítica, testing e integración de productos digitales con IA.",
+    title: "Stack Tecnológico",
+    subtitle: "Tecnologías, herramientas y metodologías profesionales.",
     categoryLabel: "Categoría",
-    proficiencyLabel: "Dominio",
     filters: {
       all: "Todos",
-      core: "Core Frontend",
-      frameworks: "Frameworks",
-      ui: "UI / UX",
-      cloud: "Cloud / DevTools",
-      marketingCms: "SEO / CMS / Analytics",
-      ai: "IA / AI Tools",
-      quality: "Testing / Calidad",
+      frontend: "Frontend",
+      backend: "Backend",
+      cloudDevops: "Cloud & DevOps",
+      databases: "Bases de Datos",
+      aiAutomation: "IA y Automatización",
+      architecture: "Arquitectura y Metodologías",
+      tools: "Herramientas",
     },
     categoryNames: {
-      core: "Core Frontend",
-      frameworks: "Frameworks",
-      ui: "UI / UX",
-      cloud: "Cloud / DevTools",
-      marketingCms: "SEO / CMS / Analytics",
-      ai: "IA / AI Tools",
-      quality: "Testing / Calidad",
+      frontend: "Frontend",
+      backend: "Backend",
+      cloudDevops: "Cloud & DevOps",
+      databases: "Bases de Datos",
+      aiAutomation: "IA y Automatización",
+      architecture: "Arquitectura y Metodologías",
+      tools: "Herramientas",
     },
   },
   en: {
     badge: "Skills",
-    title: "Senior Frontend Developer",
-    subtitle:
-      "A stack focused on modern frontend, user experience, performance, SEO, analytics, testing, and AI-powered digital product integration.",
+    title: "Technology Stack",
+    subtitle: "Professional technologies, tools, and methodologies.",
     categoryLabel: "Category",
-    proficiencyLabel: "Proficiency",
     filters: {
       all: "All",
-      core: "Core Frontend",
-      frameworks: "Frameworks",
-      ui: "UI / UX",
-      cloud: "Cloud / DevTools",
-      marketingCms: "SEO / CMS / Analytics",
-      ai: "AI / AI Tools",
-      quality: "Testing / Quality",
+      frontend: "Frontend",
+      backend: "Backend",
+      cloudDevops: "Cloud & DevOps",
+      databases: "Databases",
+      aiAutomation: "AI & Automation",
+      architecture: "Architecture & Methodologies",
+      tools: "Tools",
     },
     categoryNames: {
-      core: "Core Frontend",
-      frameworks: "Frameworks",
-      ui: "UI / UX",
-      cloud: "Cloud / DevTools",
-      marketingCms: "SEO / CMS / Analytics",
-      ai: "AI / AI Tools",
-      quality: "Testing / Quality",
+      frontend: "Frontend",
+      backend: "Backend",
+      cloudDevops: "Cloud & DevOps",
+      databases: "Databases",
+      aiAutomation: "AI & Automation",
+      architecture: "Architecture & Methodologies",
+      tools: "Tools",
     },
   },
 } as const;
 
 const skills: Skill[] = [
-  { key: "react", name: { es: "React", en: "React" }, icon: <FaReact />, level: 95, category: "core" },
-  { key: "nextjs", name: { es: "Next.js", en: "Next.js" }, icon: <SiNextdotjs />, level: 90, category: "frameworks" },
-  { key: "typescript", name: { es: "TypeScript", en: "TypeScript" }, icon: <SiTypescript />, level: 85, category: "core" },
-  { key: "javascript", name: { es: "JavaScript", en: "JavaScript" }, icon: <SiJavascript />, level: 95, category: "core" },
-  { key: "html", name: { es: "HTML", en: "HTML" }, icon: <FaHtml5 />, level: 97, category: "core" },
-  { key: "css", name: { es: "CSS", en: "CSS" }, icon: <FaCss3Alt />, level: 98, category: "core" },
-  { key: "sass", name: { es: "SASS / SCSS", en: "SASS / SCSS" }, icon: <SiSass />, level: 90, category: "core" },
+  { key: "reactjs", name: { es: "React.js", en: "React.js" }, icon: <FaReact />, category: "frontend" },
+  { key: "nextjs", name: { es: "Next.js", en: "Next.js" }, icon: <SiNextdotjs />, category: "frontend" },
+  { key: "typescript", name: { es: "TypeScript", en: "TypeScript" }, icon: <SiTypescript />, category: "frontend" },
+  { key: "javascript", name: { es: "JavaScript (ES6+)", en: "JavaScript (ES6+)" }, icon: <SiJavascript />, category: "frontend" },
+  { key: "angular", name: { es: "Angular", en: "Angular" }, icon: <FaAngular />, category: "frontend" },
+  { key: "rxjs", name: { es: "RxJS", en: "RxJS" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "react-router", name: { es: "React Router", en: "React Router" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "redux-toolkit", name: { es: "Redux Toolkit", en: "Redux Toolkit" }, icon: <SiRedux />, category: "frontend" },
+  { key: "context-api", name: { es: "Context API", en: "Context API" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "react-hook-form", name: { es: "React Hook Form", en: "React Hook Form" }, icon: <FaReact />, category: "frontend" },
+  { key: "html5", name: { es: "HTML5", en: "HTML5" }, icon: <FaHtml5 />, category: "frontend" },
+  { key: "css3", name: { es: "CSS3", en: "CSS3" }, icon: <FaCss3Alt />, category: "frontend" },
+  { key: "sass", name: { es: "Sass (SCSS)", en: "Sass (SCSS)" }, icon: <SiSass />, category: "frontend" },
+  { key: "vanilla-extract", name: { es: "Vanilla Extract", en: "Vanilla Extract" }, icon: <FaTools />, category: "frontend" },
+  { key: "tailwind", name: { es: "Tailwind CSS", en: "Tailwind CSS" }, icon: <SiTailwindcss />, category: "frontend" },
+  { key: "mui", name: { es: "Material UI (MUI)", en: "Material UI (MUI)" }, icon: <FaFigma />, category: "frontend" },
+  { key: "bootstrap", name: { es: "Bootstrap", en: "Bootstrap" }, icon: <SiBootstrap />, category: "frontend" },
+  { key: "storybook", name: { es: "Storybook", en: "Storybook" }, icon: <SiStorybook />, category: "frontend" },
+  { key: "i18next", name: { es: "i18next", en: "i18next" }, icon: <FaTools />, category: "frontend" },
+  { key: "responsive-web-design", name: { es: "Diseño Web Responsivo", en: "Responsive Web Design" }, icon: <FaFigma />, category: "frontend" },
+  { key: "wcag", name: { es: "WCAG 2.1", en: "WCAG 2.1" }, icon: <FaTools />, category: "frontend" },
+  { key: "aria", name: { es: "ARIA", en: "ARIA" }, icon: <FaTools />, category: "frontend" },
+  { key: "core-web-vitals", name: { es: "Core Web Vitals", en: "Core Web Vitals" }, icon: <FaTools />, category: "frontend" },
+  { key: "seo", name: { es: "SEO", en: "SEO" }, icon: <FaTools />, category: "frontend" },
+  { key: "spas", name: { es: "SPAs", en: "SPAs" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "jest", name: { es: "Jest", en: "Jest" }, icon: <SiJest />, category: "frontend" },
+  { key: "react-testing-library", name: { es: "React Testing Library", en: "React Testing Library" }, icon: <FaReact />, category: "frontend" },
+  { key: "cypress", name: { es: "Cypress", en: "Cypress" }, icon: <SiCypress />, category: "frontend" },
+  { key: "lazy-loading", name: { es: "Carga Diferida (Lazy Loading)", en: "Lazy Loading" }, icon: <FaTools />, category: "frontend" },
+  { key: "code-splitting", name: { es: "Code Splitting", en: "Code Splitting" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "module-federation", name: { es: "Module Federation", en: "Module Federation" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "drupal-headless-cms", name: { es: "Drupal Headless CMS", en: "Drupal Headless CMS" }, icon: <SiDrupal />, category: "frontend" },
+  { key: "webpack", name: { es: "Webpack", en: "Webpack" }, icon: <SiWebpack />, category: "frontend" },
+  { key: "vite", name: { es: "Vite", en: "Vite" }, icon: <SiVite />, category: "frontend" },
+  { key: "fetch-api", name: { es: "Fetch API", en: "Fetch API" }, icon: <FaCodeBranch />, category: "frontend" },
+  { key: "axios", name: { es: "Axios", en: "Axios" }, icon: <SiAxios />, category: "frontend" },
+  { key: "jquery", name: { es: "jQuery", en: "jQuery" }, icon: <SiJquery />, category: "frontend" },
 
-  { key: "tailwind", name: { es: "Tailwind CSS", en: "Tailwind CSS" }, icon: <SiTailwindcss />, level: 92, category: "ui" },
-  { key: "mui", name: { es: "Material UI (MUI)", en: "Material UI (MUI)" }, icon: <FaFigma />, level: 85, category: "ui" },
-  { key: "bootstrap", name: { es: "Bootstrap", en: "Bootstrap" }, icon: <SiBootstrap />, level: 75, category: "ui" },
-  { key: "figma", name: { es: "Figma", en: "Figma" }, icon: <FaFigma />, level: 82, category: "ui" },
-  { key: "responsive", name: { es: "Diseño Responsive", en: "Responsive Design" }, icon: <FaFigma />, level: 96, category: "ui" },
+  { key: "nodejs", name: { es: "Node.js", en: "Node.js" }, icon: <FaNodeJs />, category: "backend" },
+  { key: "expressjs", name: { es: "Express.js", en: "Express.js" }, icon: <SiExpress />, category: "backend" },
+  { key: "rest-apis", name: { es: "REST APIs", en: "REST APIs" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "graphql", name: { es: "GraphQL", en: "GraphQL" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "shopify-storefront-api", name: { es: "Shopify Storefront API", en: "Shopify Storefront API" }, icon: <SiShopify />, category: "backend" },
+  { key: "openapi", name: { es: "OpenAPI", en: "OpenAPI" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "json-api", name: { es: "JSON:API", en: "JSON:API" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "api-consumption", name: { es: "Consumo de APIs", en: "API Consumption" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "third-party-integrations", name: { es: "Integraciones de Terceros", en: "Third-Party Integrations" }, icon: <FaCodeBranch />, category: "backend" },
+  { key: "jwt-authentication", name: { es: "Autenticación JWT", en: "JWT Authentication" }, icon: <FaTools />, category: "backend" },
+  { key: "oauth2", name: { es: "OAuth 2.0", en: "OAuth 2.0" }, icon: <FaTools />, category: "backend" },
+  { key: "dotnet", name: { es: ".NET", en: ".NET" }, icon: <FaTools />, category: "backend" },
+  { key: "csharp", name: { es: "C#", en: "C#" }, icon: <FaTools />, category: "backend" },
 
-  { key: "node", name: { es: "Node.js", en: "Node.js" }, icon: <FaNodeJs />, level: 78, category: "frameworks" },
-  { key: "redux", name: { es: "Redux Toolkit", en: "Redux Toolkit" }, icon: <SiRedux />, level: 84, category: "frameworks" },
-  { key: "jquery", name: { es: "jQuery", en: "jQuery" }, icon: <SiJquery />, level: 80, category: "frameworks" },
-  { key: "vite", name: { es: "Vite", en: "Vite" }, icon: <SiVite />, level: 87, category: "frameworks" },
-  { key: "webpack", name: { es: "Webpack", en: "Webpack" }, icon: <SiWebpack />, level: 85, category: "frameworks" },
-  { key: "vue", name: { es: "Vue.js", en: "Vue.js" }, icon: <FaVuejs />, level: 50, category: "frameworks" },
-  { key: "angular", name: { es: "Angular", en: "Angular" }, icon: <FaAngular />, level: 50, category: "frameworks" },
+  { key: "azure-devops", name: { es: "Azure DevOps", en: "Azure DevOps" }, icon: <FaCodeBranch />, category: "cloudDevops" },
+  { key: "azure-cloud", name: { es: "Azure Cloud", en: "Azure Cloud" }, icon: <FaCodeBranch />, category: "cloudDevops" },
+  { key: "aws-s3", name: { es: "AWS (S3)", en: "AWS (S3)" }, icon: <FaAws />, category: "cloudDevops" },
+  { key: "docker", name: { es: "Docker", en: "Docker" }, icon: <FaDocker />, category: "cloudDevops" },
+  { key: "ci-cd-pipelines", name: { es: "CI/CD Pipelines", en: "CI/CD Pipelines" }, icon: <FaCodeBranch />, category: "cloudDevops" },
+  { key: "github-actions", name: { es: "GitHub Actions", en: "GitHub Actions" }, icon: <SiGithubactions />, category: "cloudDevops" },
+  { key: "git-cloud", name: { es: "Git", en: "Git" }, icon: <FaGitAlt />, category: "cloudDevops" },
+  { key: "version-control", name: { es: "Control de Versiones", en: "Version Control" }, icon: <FaGitAlt />, category: "cloudDevops" },
+  { key: "vercel", name: { es: "Vercel", en: "Vercel" }, icon: <SiVercel />, category: "cloudDevops" },
 
-  { key: "git", name: { es: "Git", en: "Git" }, icon: <FaGitAlt />, level: 93, category: "cloud" },
-  { key: "docker", name: { es: "Docker", en: "Docker" }, icon: <FaDocker />, level: 70, category: "cloud" },
-  { key: "aws", name: { es: "AWS", en: "AWS" }, icon: <FaAws />, level: 60, category: "cloud" },
-  { key: "firebase", name: { es: "Firebase", en: "Firebase" }, icon: <SiFirebase />, level: 50, category: "cloud" },
-  { key: "vercel", name: { es: "Vercel", en: "Vercel" }, icon: <SiVercel />, level: 88, category: "cloud" },
+  { key: "postgresql", name: { es: "PostgreSQL", en: "PostgreSQL" }, icon: <SiPostgresql />, category: "databases" },
+  { key: "sql-server", name: { es: "SQL Server", en: "SQL Server" }, icon: <SiMicrosoftsqlserver />, category: "databases" },
+  { key: "mongodb", name: { es: "MongoDB", en: "MongoDB" }, icon: <SiMongodb />, category: "databases" },
+  { key: "mysql", name: { es: "MySQL", en: "MySQL" }, icon: <SiMysql />, category: "databases" },
+  { key: "firebase", name: { es: "Firebase", en: "Firebase" }, icon: <SiFirebase />, category: "databases" },
 
-  { key: "jest", name: { es: "Jest", en: "Jest" }, icon: <SiJest />, level: 80, category: "quality" },
-  { key: "cypress", name: { es: "Cypress", en: "Cypress" }, icon: <SiCypress />, level: 78, category: "quality" },
-  { key: "storybook", name: { es: "Storybook", en: "Storybook" }, icon: <SiStorybook />, level: 70, category: "quality" },
-  { key: "debugging", name: { es: "Depuración Frontend", en: "Front-end Debugging" }, icon: <FaTools />, level: 90, category: "quality" },
+  { key: "ai-assisted-development", name: { es: "Desarrollo Asistido por IA", en: "AI-Assisted Development" }, icon: <FaRobot />, category: "aiAutomation" },
+  { key: "github-copilot-ai", name: { es: "GitHub Copilot", en: "GitHub Copilot" }, icon: <SiGithub />, category: "aiAutomation" },
+  { key: "claude-code", name: { es: "Claude Code", en: "Claude Code" }, icon: <FaRobot />, category: "aiAutomation" },
+  { key: "opencode", name: { es: "OpenCode", en: "OpenCode" }, icon: <FaRobot />, category: "aiAutomation" },
+  { key: "openai-integrations", name: { es: "Integraciones de OpenAI", en: "OpenAI Integrations" }, icon: <SiOpenai />, category: "aiAutomation" },
+  { key: "openai-agents", name: { es: "Agentes de OpenAI", en: "OpenAI Agents" }, icon: <SiOpenai />, category: "aiAutomation" },
 
-  { key: "seo", name: { es: "SEO", en: "SEO" }, icon: <SiGoogleanalytics />, level: 88, category: "marketingCms" },
-  { key: "performance", name: { es: "Optimización de Performance", en: "Performance Optimization" }, icon: <SiGoogleanalytics />, level: 90, category: "marketingCms" },
-  { key: "gtm", name: { es: "Google Tag Manager", en: "Google Tag Manager" }, icon: <SiGoogleanalytics />, level: 80, category: "marketingCms" },
-  { key: "ga", name: { es: "Google Analytics", en: "Google Analytics" }, icon: <SiGoogleanalytics />, level: 84, category: "marketingCms" },
-  { key: "wordpress", name: { es: "WordPress", en: "WordPress" }, icon: <FaWordpress />, level: 78, category: "marketingCms" },
-  { key: "webflow", name: { es: "Webflow", en: "Webflow" }, icon: <SiWebflow />, level: 76, category: "marketingCms" },
+  { key: "frontend-architecture", name: { es: "Arquitectura Front-End", en: "Front-End Architecture" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "design-systems", name: { es: "Design Systems", en: "Design Systems" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "scalable-frontend-applications", name: { es: "Aplicaciones Front-End Escalables", en: "Scalable Front-End Applications" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "bff", name: { es: "Backend for Frontend (BFF)", en: "Backend for Frontend (BFF)" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "clean-architecture", name: { es: "Clean Architecture", en: "Clean Architecture" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "solid-principles", name: { es: "Principios SOLID", en: "SOLID Principles" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "modular-architecture", name: { es: "Arquitectura Modular", en: "Modular Architecture" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "state-management", name: { es: "Gestión de Estado", en: "State Management" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "performance-optimization", name: { es: "Optimización del Rendimiento", en: "Performance Optimization" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "lazy-loading-architecture", name: { es: "Carga Diferida (Lazy Loading)", en: "Lazy Loading" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "technical-leadership", name: { es: "Liderazgo Técnico", en: "Technical Leadership" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "code-reviews", name: { es: "Revisiones de Código", en: "Code Reviews" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "technical-documentation", name: { es: "Documentación Técnica", en: "Technical Documentation" }, icon: <FaProjectDiagram />, category: "architecture" },
+  { key: "agile-scrum", name: { es: "Agile/Scrum", en: "Agile/Scrum" }, icon: <FaProjectDiagram />, category: "architecture" },
 
-  { key: "openai", name: { es: "OpenAI API", en: "OpenAI API" }, icon: <SiOpenai />, level: 76, category: "ai" },
-  { key: "copilot", name: { es: "GitHub Copilot", en: "GitHub Copilot" }, icon: <SiGithub />, level: 75, category: "ai" },
-  { key: "ai-agents", name: { es: "AI Agents", en: "AI Agents" }, icon: <FaRobot />, level: 74, category: "ai" },
-  { key: "chatbots", name: { es: "Chatbots", en: "Chatbots" }, icon: <FaComments />, level: 80, category: "ai" },
+  { key: "visual-studio-code", name: { es: "Visual Studio Code", en: "Visual Studio Code" }, icon: <FaTools />, category: "tools" },
+  { key: "git-tool", name: { es: "Git", en: "Git" }, icon: <FaGitAlt />, category: "tools" },
+  { key: "github-tool", name: { es: "GitHub", en: "GitHub" }, icon: <SiGithub />, category: "tools" },
+  { key: "azure-devops-tool", name: { es: "Azure DevOps", en: "Azure DevOps" }, icon: <FaTools />, category: "tools" },
+  { key: "jira", name: { es: "Jira", en: "Jira" }, icon: <FaTools />, category: "tools" },
+  { key: "figma", name: { es: "Figma", en: "Figma" }, icon: <FaFigma />, category: "tools" },
+  { key: "postman", name: { es: "Postman", en: "Postman" }, icon: <FaTools />, category: "tools" },
+  { key: "swagger-openapi", name: { es: "Swagger/OpenAPI", en: "Swagger/OpenAPI" }, icon: <FaCodeBranch />, category: "tools" },
+  { key: "storybook-tool", name: { es: "Storybook", en: "Storybook" }, icon: <SiStorybook />, category: "tools" },
+  { key: "chrome-devtools", name: { es: "Chrome DevTools", en: "Chrome DevTools" }, icon: <FaTools />, category: "tools" },
+  { key: "docker-desktop", name: { es: "Docker Desktop", en: "Docker Desktop" }, icon: <FaDocker />, category: "tools" },
+  { key: "github-copilot-tool", name: { es: "GitHub Copilot", en: "GitHub Copilot" }, icon: <SiGithub />, category: "tools" },
+  { key: "claude-code-tool", name: { es: "Claude Code", en: "Claude Code" }, icon: <FaRobot />, category: "tools" },
+  { key: "chatgpt", name: { es: "ChatGPT", en: "ChatGPT" }, icon: <SiOpenai />, category: "tools" },
+  { key: "powershell", name: { es: "PowerShell", en: "PowerShell" }, icon: <FaTools />, category: "tools" },
+  { key: "chrome-lighthouse", name: { es: "Chrome Lighthouse", en: "Chrome Lighthouse" }, icon: <FaTools />, category: "tools" },
+  { key: "npm", name: { es: "NPM", en: "NPM" }, icon: <FaTools />, category: "tools" },
 ];
 
 export default function SkillsSection() {
@@ -179,13 +241,13 @@ export default function SkillsSection() {
 
   const categoryTabs: Category[] = [
     "all",
-    "core",
-    "frameworks",
-    "ui",
-    "cloud",
-    "marketingCms",
-    "ai",
-    "quality",
+    "frontend",
+    "backend",
+    "cloudDevops",
+    "databases",
+    "aiAutomation",
+    "architecture",
+    "tools",
   ];
 
   const filteredSkills = useMemo(() => {
@@ -264,21 +326,6 @@ export default function SkillsSection() {
                 </p>
               </div>
 
-              <div className="mb-2 flex items-center justify-between">
-                <span className="text-sm text-white/65">
-                  {t.proficiencyLabel}
-                </span>
-                <span className="text-sm font-semibold text-white/80">
-                  {skill.level}%
-                </span>
-              </div>
-
-              <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/10">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 transition-all duration-500"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
             </article>
           ))}
         </div>

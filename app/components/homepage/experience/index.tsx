@@ -16,7 +16,6 @@ import {
 } from "react-icons/bs";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import {
-  SiAuth0,
   SiAwslambda,
   SiAzuredevops,
   SiBootstrap,
@@ -49,384 +48,151 @@ import { useLanguage } from "@/app/context/language-context";
 const experienceContent = {
   es: {
     badge: "TRAYECTORIA PROFESIONAL",
-    titleStart: "Experiencia enfocada en",
-    titleHighlight: "Front-End de alto impacto",
+    titleStart: "Experiencia profesional en",
+    titleHighlight: "desarrollo Front-End",
     description:
-      "Más de 8 años desarrollando aplicaciones web con React.js, Next.js y TypeScript para productos enterprise. Mi enfoque está en arquitectura front-end, UX/UI, performance, testing, autenticación segura, integración con APIs modernas y despliegues automatizados en cloud.",
-    stackLabel: "Stack relevante",
-    projectsLabel: "Proyectos destacados",
-    strengthsLabel: "Fortalezas clave",
-    metricsLabel: "Métricas y enfoque técnico",
+      "Más de 8 años de experiencia en desarrollo Front-End, con React, Next.js, TypeScript y Angular. Experiencia en aplicaciones web empresariales, arquitectura escalable, componentes reutilizables, accesibilidad y colaboración en equipos Agile (Scrum).",
+    stackLabel: "Tecnologías relevantes",
+    projectsLabel: "Contribuciones profesionales",
+    strengthsLabel: "Áreas de experiencia",
+    metricsLabel: "Enfoque técnico",
     panel: {
       overline: "FRONT-END ENGINEERING",
       heading:
         "Arquitectura UI moderna, performance, calidad de código y experiencia real de producto",
       cards: [
         {
-          title: "UI/UX CON IMPACTO",
+          title: "COMPONENTES REUTILIZABLES",
           value: "Reusable",
-          caption: "Interfaces limpias, responsivas y reutilizables",
+          caption: "Componentes reutilizables y bibliotecas de componentes",
           borderClass:
             "border-[rgba(32,240,199,0.58)] shadow-[0_0_0_1px_rgba(32,240,199,0.12)]",
           titleClass: "text-[#20f0c7]",
         },
         {
-          title: "ARQUITECTURA ESCALABLE",
+          title: "ARQUITECTURA FRONT-END",
           value: "Reliable",
-          caption: "Código mantenible, testing y buenas prácticas",
+          caption: "Aplicaciones escalables y mantenibles",
           borderClass:
             "border-[rgba(123,44,255,0.58)] shadow-[0_0_0_1px_rgba(123,44,255,0.12)]",
           titleClass: "text-[#52c7ff]",
         },
         {
-          title: "DELIVERY ÁGIL",
+          title: "COLABORACIÓN ÁGIL",
           value: "Agile",
-          caption: "Scrum, CI/CD y colaboración con producto",
+          caption: "Colaboración con UX/UI, Backend, QA, DevOps y Product Owners",
           borderClass:
             "border-[rgba(255,60,172,0.58)] shadow-[0_0_0_1px_rgba(255,60,172,0.12)]",
           titleClass: "text-[#ffd84d]",
         },
       ],
       bullets: [
-        "React.js avanzado, Hooks, Context API y componentes funcionales",
-        "Next.js con SSR / SSG / ISR, Server Actions y arquitectura escalable",
-        "HTML5, CSS3, Flexbox, Grid, Material UI y responsive design",
-        "Testing, autenticación segura, integración REST / GraphQL y cloud delivery",
+        "React, Next.js, TypeScript, Angular y RxJS",
+        "Arquitectura Front-End, Design Systems y componentes reutilizables",
+        "SSR / SSG / ISR, performance, accesibilidad y Responsive Design",
+        "Testing con Jest, React Testing Library y Cypress",
       ],
     },
     metrics: [
       {
-        label: "Realtime APIs",
+        label: "APIs",
         value: "REST / GraphQL",
         icon: "api",
-        caption: "Integraciones en tiempo real y flujos conectados con proveedores externos.",
+        caption: "REST APIs, GraphQL y Shopify Storefront API.",
       },
       {
         label: "CI/CD",
-        value: "GitHub / AWS",
+        value: "Azure DevOps / GitHub Actions",
         icon: "delivery",
-        caption: "Pipelines, YAML workflows, ambientes QA, Staging y Main con despliegues automáticos.",
+        caption: "CI/CD Pipelines, GitHub Actions y Docker.",
       },
       {
         label: "Testing",
-        value: "Jest + RTL",
+        value: "Jest / RTL / Cypress",
         icon: "testing",
-        caption: "Cobertura funcional, estabilidad de componentes y validación continua.",
+        caption: "Jest, React Testing Library y Cypress.",
       },
       {
-        label: "Cloud Migration",
-        value: "Azure / AWS",
+        label: "Cloud & DevOps",
+        value: "Azure / Vercel",
         icon: "cloud",
-        caption: "Modernización de sistemas legacy y despliegue en infraestructura cloud.",
+        caption: "Azure DevOps, CI/CD Pipelines y Vercel.",
       },
       {
         label: "Next.js",
         value: "SSR / SSG / ISR",
         icon: "performance",
-        caption: "Optimización de renderizado, performance y estrategias híbridas de entrega.",
+        caption: "Server-side rendering, Static Site Generation e Incremental Static Regeneration.",
       },
       {
-        label: "Auth",
-        value: "JWT / OAuth2",
+        label: "AI-Assisted Development",
+        value: "OpenAI / Copilot",
         icon: "security",
-        caption: "Autenticación profesional, sesiones seguras y protección de flujos enterprise.",
+        caption: "GitHub Copilot, Claude Code, OpenCode e integraciones con OpenAI.",
       },
     ],
     roles: [
       {
         id: 1,
-        period: "Feb 2022 - Ene 2025",
+        period: "Feb 2022 - Apr 2026",
         role: "Senior Front-End Engineer",
         company: "Afore Principal",
-        type: "Remote Freelancer · Fintech / Enterprise",
+        type: "",
         summary:
-          "Desarrollo de widgets y librerías front-end reutilizables con React.js, Next.js, TypeScript y Material UI para integrarse en sistemas internos enterprise. Conversión de requerimientos funcionales y diseños en Figma a componentes responsivos, escalables y mantenibles, colaborando con UX/UI, backend y producto bajo metodologías ágiles.",
+          "Desarrollo de aplicaciones web empresariales del sector financiero con React, Next.js, TypeScript y Angular, contribuyendo a una arquitectura Front-End escalable, componentes reutilizables y estándares de desarrollo.",
         highlights: [
-          "Desarrollo y mantenimiento de aplicaciones y widgets con React.js avanzado, Next.js, Hooks, Context API, TypeScript y componentes funcionales.",
-          "Construcción de widgets reutilizables consumidos como librerías dentro de sistemas internos, siguiendo un enfoque modular similar a integraciones por import/CDN.",
-          "Implementación de interfaces responsivas con HTML5, CSS3, Flexbox, Grid y Material UI, cuidando accesibilidad, consistencia visual y experiencia de usuario.",
-          "Conversión de requerimientos y maquetado en Figma a componentes reutilizables documentados, escalables y alineados con buenas prácticas front-end.",
-          "Integración y consumo de APIs REST y GraphQL para mostrar información de negocio en tiempo real dentro de portales internos.",
-          "Trabajo con arquitectura moderna en Next.js contemplando SSR, SSG, ISR y patrones de escalabilidad del lado del front.",
-          "Implementación de pruebas unitarias e integración con Jest, Cypress y React Testing Library para asegurar estabilidad funcional.",
-          "Aplicación de seguridad front-end mediante JWT y OAuth2, además de integraciones con AWS Lambda y servicios backend conectados.",
-          "Participación en code reviews, documentación de componentes, procesos técnicos y definición de estándares de desarrollo.",
-          "Trabajo diario con Scrum, Jira, refinamientos, dailys y colaboración con equipos multidisciplinarios, incluyendo comunicación técnica en inglés cuando fue requerido.",
-          "Configuración de CI/CD con GitHub Actions, archivos YAML, deploys automáticos y manejo de ambientes QA, Staging y Main.",
-          "Colaboración con Docker, Drupal y flujos de despliegue cloud en entornos enterprise.",
-        ],
-        projects: [
-          "Widget inteligente de simulación y recomendación asistida con OpenAI para orientar opciones y escenarios financieros dentro del portal.",
-          "Módulo de ayuda contextual con IA para formularios y flujos internos, generando asistencia dinámica y respuestas guiadas para usuarios y asesores.",
-        ],
-        stack: [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "JavaScript",
-          "HTML5",
-          "CSS3",
-          "Material UI",
-          "Redux",
-          "Figma",
-          "Jest",
-          "Cypress",
-          "Testing Library",
-          "JWT",
-          "OAuth2",
-          "AWS Lambda",
-          "GitHub Actions",
-          "Git",
-          "GitHub",
-          "Docker",
-          "Drupal",
-          "REST APIs",
-          "GraphQL",
-          "AWS",
-          "Vercel",
-        ],
-      },
-      {
-        id: 2,
-        period: "Jul 2018 - Ene 2022",
-        role: "Senior Front-End Developer",
-        company: "AXA Assistance",
-        type: "Enterprise · Remote / Hybrid",
-        summary:
-          "Desarrollo y modernización de soluciones front-end enterprise con React.js, Next.js y TypeScript para productos del sector asegurador. Participación en integración de APIs externas, refactorización de sistemas legacy, migración hacia Azure y construcción de interfaces reutilizables orientadas a performance, mantenibilidad y experiencia de usuario.",
-        highlights: [
-          "Desarrollo y mantenimiento de aplicaciones web con React.js, Next.js, TypeScript y JavaScript ES6+ para productos de asistencia y pólizas.",
-          "Implementación de interfaces de usuario responsivas y reutilizables, colaborando con áreas de UX/UI, backend y producto para construir nuevas funcionalidades.",
-          "Integración de múltiples APIs REST de proveedores externos de grúas y asistencia para mostrar información operativa en tiempo real desde el front-end.",
-          "Consumo de servicios REST y GraphQL con enfoque en performance, calidad de código, tipado fuerte y experiencia consistente para el usuario final.",
-          "Refactorización de sistemas front-end legacy hacia tecnología moderna con Next.js, TypeScript e interfaces escalables.",
-          "Participación en estrategias de renderizado y arquitectura moderna con Next.js para mejorar performance y mantenibilidad del producto.",
-          "Migración de módulos y aplicaciones hacia Azure mediante pipelines, flujos controlados de despliegue y modernización progresiva de la plataforma.",
-          "Trabajo con Scrum, Azure Boards, Azure Repos, Git, control de versiones, code reviews y seguimiento continuo de tareas.",
-          "Aplicación de principios SOLID, clean code, documentación técnica y buenas prácticas de desarrollo en componentes, interfaces y flujos de negocio.",
-          "Implementación de autenticación profesional y manejo seguro de sesiones en flujos enterprise conectados.",
-          "Colaboración con equipos internos y comunicación transversal para validar requerimientos, prioridades y entregables técnicos.",
-        ],
-        projects: [
-          "Integración front-end con proveedores externos de asistencia vial y grúas para visualizar disponibilidad, estatus y datos operativos en tiempo real para usuarios finales.",
-          "Refactorización y migración de módulos legacy hacia Next.js + TypeScript, desplegados en Azure mediante pipelines automatizados y ambientes controlados.",
-          "Chatbot de apoyo para usuarios de pólizas de auto, orientado a respuestas rápidas, guía de flujos y consulta contextual dentro del portal.",
-        ],
-        stack: [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "JavaScript",
-          "HTML5",
-          "CSS3",
-          "Tailwind CSS",
-          "Material UI",
-          "Redux",
-          "REST APIs",
-          "GraphQL",
-          "Auth0",
-          "Azure",
-          "Git",
-          "GitHub",
-          "Vercel",
-        ],
-      },
-      {
-        id: 3,
-        period: "Jul 2016 - Jun 2018",
-        role: "Developer Front-End",
-        company: "SEP",
-        type: "Government Projects",
-        summary:
-          "Desarrollo y mantenimiento de sistemas administrativos y sitios web, fortaleciendo una base sólida en integración backend, maquetación responsiva y desarrollo web empresarial.",
-        highlights: [
-          "Mantenimiento y evolución de múltiples sistemas administrativos web.",
-          "Desarrollo de Web APIs y soluciones para procesamiento de datos.",
-          "Construcción de interfaces responsivas con HTML5, CSS3 y Bootstrap.",
-          "Trabajo en equipos ágiles orientados a entregas estables y continuas.",
+          "Desarrollo de una plataforma e-commerce para la venta y contratación de productos financieros, con catálogos reutilizables, flujos de cotización, formularios dinámicos, búsqueda, filtrado, ordenamiento y comparación; incluye carrito de compras para fondos de inversión y selección de pagos con Debit Card, Direct Debit y SPEI.",
+          "Integración de REST APIs, Shopify Storefront API, GraphQL, servicios con OpenAI y servicios de terceros para verificación de identidad.",
+          "Modernización de aplicaciones legacy con Angular, TypeScript, RxJS y Reactive Forms, además de soluciones con React, Next.js, jQuery, AJAX, HTML y CSS; uso de SSR, SSG, ISR y Lazy Loading.",
+          "Construcción de arquitectura Front-End escalable, componentes reutilizables, Design Systems, Storybook, Design Tokens y Theming; uso de Redux Toolkit, Context API y React Hook Form.",
+          "Integración con Drupal Headless CMS mediante JSON:API; uso de Dexie e IndexedDB, Microfrontends y Module Federation.",
+          "Desarrollo de interfaces Responsive Design con HTML, CSS, Bootstrap, Sass (SCSS) y Vanilla Extract, aplicando Lazy Loading, Code Splitting, Core Web Vitals y SEO.",
+          "Aplicación de WCAG 2.1, Semantic HTML y ARIA; uso de Cookies, Session Storage, Local Storage e IndexedDB para persistencia del lado del cliente.",
+          "Pruebas con Jest, React Testing Library y Cypress; despliegues y flujos CI/CD con Azure DevOps, GitHub Actions, Docker, Vercel y Azure.",
+          "Liderazgo de funcionalidades Front-End desde el análisis de requerimientos hasta producción; definición de estándares, Code Reviews y mentoring, con equipos de UX/UI, Backend, QA, DevOps y Product Owners en Agile / Scrum.",
+          "Uso de AI-Assisted Development, GitHub Copilot, Claude Code, OpenCode y tecnologías de OpenAI.",
+          "Desarrollo de integraciones con Node.js, Express.js y Next.js API Routes; contribución a servicios Backend for Frontend (BFF) para aplicaciones React / Next.js y REST APIs empresariales.",
         ],
         projects: [],
         stack: [
-          "JavaScript",
-          "HTML5",
-          "CSS3",
-          "Bootstrap",
-          "C#",
-          ".NET",
-          "REST APIs",
-          "SQL Server",
-          "Azure",
-          "Git",
-        ],
-      },
-      {
-        id: 4,
-        period: "Mar 2012 - May 2016",
-        role: "Front-End Developer JR",
-        company: "Metrix Networks",
-        type: "Healthcare Systems",
-        summary:
-          "Diseño y desarrollo de interfaces web responsivas para sistemas de salud, con foco en compatibilidad cross-browser, experiencia de usuario y construcción de componentes visuales reutilizables.",
-        highlights: [
-          "Desarrollo de interfaces adaptables para múltiples dispositivos y resoluciones.",
-          "Construcción de componentes visuales orientados a UX y consistencia de diseño.",
-          "Maquetación con HTML, CSS, JavaScript y soporte cross-browser.",
-          "Validación y compatibilidad en Chrome, Firefox, Safari y Edge.",
-        ],
-        projects: [],
-        stack: [
-          "JavaScript",
-          "TypeScript",
-          "HTML5",
-          "CSS3",
-          "Sass",
-          "Bootstrap",
-          "Material UI",
-          "ECMAScript",
-          "Ajax",
-          "Jquery",
-          "REST APIs",
-        ],
-      },
-    ],
-  },
-  en: {
-    badge: "PROFESSIONAL JOURNEY",
-    titleStart: "Experience focused on",
-    titleHighlight: "high-impact Front-End engineering",
-    description:
-      "8+ years building web applications with React.js, Next.js, and TypeScript for enterprise products. My focus is front-end architecture, UX/UI, performance, testing, secure authentication, modern API integration, and automated cloud delivery.",
-    stackLabel: "Relevant stack",
-    projectsLabel: "Highlighted projects",
-    strengthsLabel: "Core strengths",
-    metricsLabel: "Metrics & technical focus",
-    panel: {
-      overline: "FRONT-END ENGINEERING",
-      heading:
-        "Modern UI architecture, performance, code quality, and real product experience",
-      cards: [
-        {
-          title: "UI/UX IMPACT",
-          value: "Reusable",
-          caption: "Clean, responsive and reusable interfaces",
-          borderClass:
-            "border-[rgba(32,240,199,0.58)] shadow-[0_0_0_1px_rgba(32,240,199,0.12)]",
-          titleClass: "text-[#20f0c7]",
-        },
-        {
-          title: "SCALABLE ARCHITECTURE",
-          value: "Reliable",
-          caption: "Maintainable code, testing and best practices",
-          borderClass:
-            "border-[rgba(123,44,255,0.58)] shadow-[0_0_0_1px_rgba(123,44,255,0.12)]",
-          titleClass: "text-[#52c7ff]",
-        },
-        {
-          title: "AGILE DELIVERY",
-          value: "Agile",
-          caption: "Scrum, CI/CD and product collaboration",
-          borderClass:
-            "border-[rgba(255,60,172,0.58)] shadow-[0_0_0_1px_rgba(255,60,172,0.12)]",
-          titleClass: "text-[#ffd84d]",
-        },
-      ],
-      bullets: [
-        "Advanced React.js, Hooks, Context API, and functional components",
-        "Next.js with SSR / SSG / ISR, Server Actions, and scalable architecture",
-        "HTML5, CSS3, Flexbox, Grid, Material UI, and responsive design",
-        "Testing, secure auth, REST / GraphQL integration, and cloud delivery",
-      ],
-    },
-    metrics: [
-      {
-        label: "Realtime APIs",
-        value: "REST / GraphQL",
-        icon: "api",
-        caption: "Real-time integrations and connected flows with third-party providers.",
-      },
-      {
-        label: "CI/CD",
-        value: "GitHub / AWS",
-        icon: "delivery",
-        caption: "Pipelines, YAML workflows, QA, Staging, and Main environments with automated delivery.",
-      },
-      {
-        label: "Testing",
-        value: "Jest + RTL",
-        icon: "testing",
-        caption: "Functional coverage, component stability, and continuous validation.",
-      },
-      {
-        label: "Cloud Migration",
-        value: "Azure / AWS",
-        icon: "cloud",
-        caption: "Legacy modernization and cloud deployment strategy across enterprise systems.",
-      },
-      {
-        label: "Next.js",
-        value: "SSR / SSG / ISR",
-        icon: "performance",
-        caption: "Hybrid rendering strategies focused on performance and scalable delivery.",
-      },
-      {
-        label: "Auth",
-        value: "JWT / OAuth2",
-        icon: "security",
-        caption: "Professional authentication, secure session flows, and protected enterprise access.",
-      },
-    ],
-    roles: [
-      {
-        id: 1,
-        period: "Feb 2022 - Mar 2026",
-        role: "Senior Front-End Engineer",
-        company: "Afore Principal",
-        type: "Remote Freelancer · Fintech / Enterprise",
-        summary:
-          "Developed reusable front-end widgets and libraries with React.js, Next.js, TypeScript, and Material UI for integration into internal enterprise systems. Translated functional requirements and Figma designs into responsive, scalable, and maintainable components while collaborating with UX/UI, backend, and product teams under agile workflows.",
-        highlights: [
-          "Developed and maintained applications and widgets using advanced React.js, Next.js, Hooks, Context API, TypeScript, and functional components.",
-          "Built reusable widgets consumed as libraries inside internal systems, following a modular distribution approach similar to CDN/import-based integration.",
-          "Implemented responsive interfaces with HTML5, CSS3, Flexbox, Grid, and Material UI, ensuring accessibility and UX consistency.",
-          "Translated requirements and Figma layouts into documented, scalable, and reusable front-end components.",
-          "Integrated and consumed REST APIs and GraphQL services to surface real-time business data inside internal portals.",
-          "Worked with modern Next.js architecture patterns including SSR, SSG, ISR, and scalable front-end delivery strategies.",
-          "Implemented unit and integration testing with Jest, Cypress, and React Testing Library to improve delivery confidence.",
-          "Applied front-end security practices using JWT and OAuth2, along with AWS Lambda integrations and connected backend services.",
-          "Participated in code reviews, technical documentation, component standards, and engineering best practices.",
-          "Worked daily with Scrum, Jira, refinements, standups, and cross-functional collaboration, including technical English communication when required.",
-          "Configured CI/CD with GitHub Actions, YAML workflows, automated deployments, and QA / Staging / Main environments.",
-          "Collaborated with Docker, Drupal, and cloud-based deployment flows in enterprise ecosystems.",
-        ],
-        projects: [
-          "OpenAI-powered simulation and recommendation widget to guide financial scenarios and decision-making flows inside the portal.",
-          "AI-assisted contextual help module for forms and internal workflows, providing dynamic guidance for users and advisors.",
-        ],
-        stack: [
           "React",
           "Next.js",
           "TypeScript",
+          "Angular",
+          "RxJS",
+          "Shopify Storefront API",
+          "GraphQL",
+          "REST APIs",
+          "OpenAI",
+          "Redux Toolkit",
+          "Context API",
+          "React Hook Form",
+          "Drupal Headless CMS",
+          "JSON:API",
+          "Dexie",
+          "IndexedDB",
+          "Module Federation",
+          "Jest",
+          "React Testing Library",
+          "Cypress",
+          "Azure DevOps",
+          "GitHub Actions",
+          "Docker",
+          "Vercel",
+          "Azure",
+          "GitHub Copilot",
+          "Claude Code",
+          "OpenCode",
+          "Node.js",
+          "Express.js",
           "JavaScript",
           "HTML5",
           "CSS3",
-          "Material UI",
-          "Redux",
           "Figma",
-          "Jest",
-          "Cypress",
-          "Testing Library",
-          "JWT",
-          "OAuth2",
-          "AWS Lambda",
-          "GitHub Actions",
-          "Git",
-          "GitHub",
-          "Docker",
-          "Drupal",
-          "REST APIs",
-          "GraphQL",
-          "AWS",
-          "Vercel",
+          "Storybook",
+          "Bootstrap",
+          "Sass (SCSS)",
+          "Vanilla Extract",
         ],
       },
       {
@@ -434,99 +200,314 @@ const experienceContent = {
         period: "Jul 2018 - Jan 2022",
         role: "Senior Front-End Developer",
         company: "AXA Assistance",
-        type: "Enterprise · Remote / Hybrid",
+        type: "",
         summary:
-          "Built and modernized enterprise front-end solutions with React.js, Next.js, and TypeScript for insurance products. Contributed to third-party API integrations, legacy refactoring, Azure migration, and reusable UI development with strong focus on performance, maintainability, and user experience.",
+          "Desarrollo Front-End con ASP.NET MVC y tecnologías web, además de aplicaciones con React, Next.js, TypeScript y Angular.",
         highlights: [
-          "Developed and maintained web applications with React.js, Next.js, TypeScript, and JavaScript ES6+ for assistance and insurance products.",
-          "Implemented responsive and reusable user interfaces while collaborating with UX/UI, backend, and product teams to build new features.",
-          "Integrated multiple REST APIs from external roadside assistance and towing providers so users could see real-time operational information from the front end.",
-          "Consumed REST and GraphQL services with strong focus on performance, code quality, strong typing, and consistent user experience.",
-          "Refactored legacy front-end systems into modern solutions using Next.js, TypeScript, and scalable interface patterns.",
-          "Contributed to modern rendering and architectural strategies in Next.js to improve performance and maintainability.",
-          "Migrated modules and applications to Azure through pipelines, controlled deployment flows, and progressive platform modernization.",
-          "Worked with Scrum, Azure Boards, Azure Repos, Git, version control, code reviews, and continuous delivery practices.",
-          "Applied SOLID principles, clean code, technical documentation, and development best practices across components and business workflows.",
-          "Implemented professional authentication and secure session handling across connected enterprise flows.",
-          "Collaborated across teams to validate requirements, priorities, and technical deliverables.",
+          "Modernización de plataformas empresariales legacy con ASP.NET MVC, HTML5, CSS3, JavaScript, jQuery y Bootstrap hacia arquitecturas Front-End con React, Next.js, TypeScript y JavaScript ES6+.",
+          "Construcción de interfaces con HTML5, CSS3, jQuery, Bootstrap, Material UI, Sass (SCSS), Tailwind CSS y diseños de Figma.",
+          "Implementación de formularios con React Hook Form y consumo de REST APIs mediante Axios y Fetch API.",
+          "Configuración de React Router, Dynamic Routing, Protected Routes, Lazy Loading y Code Splitting; refactorización de componentes para el rendimiento y la mantenibilidad.",
+          "Desarrollo con Angular, RxJS, NgRx, Angular Router, Angular Services y Reactive Forms.",
+          "Pruebas con React Testing Library y Cypress; aplicación de WCAG 2.1.",
+          "Uso de Git, Webpack, Azure DevOps, GitHub Actions, Azure, AWS y flujos CI/CD; gestión de estado con Zustand.",
         ],
-        projects: [
-          "Front-end integration with external roadside assistance and towing providers to display real-time availability, status, and service data for end users.",
-          "Legacy module refactor and migration to Next.js + TypeScript, deployed to Azure through automated pipelines and controlled environments.",
-          "Support chatbot for auto policy users, focused on quick answers, guided flows, and contextual assistance inside the platform.",
-        ],
+        projects: [],
         stack: [
+          "ASP.NET MVC",
           "React",
           "Next.js",
           "TypeScript",
-          "JavaScript",
+          "JavaScript ES6+",
           "HTML5",
           "CSS3",
-          "Tailwind CSS",
+          "jQuery",
+          "Bootstrap",
           "Material UI",
-          "Redux",
+          "Sass (SCSS)",
+          "Tailwind CSS",
+          "React Hook Form",
+          "Axios",
+          "Fetch API",
+          "React Router",
+          "Angular",
+          "RxJS",
+          "NgRx",
+          "Zustand",
           "REST APIs",
-          "GraphQL",
-          "Auth0",
+          "React Testing Library",
+          "Cypress",
+          "Webpack",
+          "GitHub Actions",
+          "Azure DevOps",
           "Azure",
+          "AWS",
           "Git",
-          "GitHub",
-          "Vercel",
         ],
       },
       {
         id: 3,
-        period: "Jul 2016 - Jun 2018",
-        role: "Front-End Developer",
-        company: "SEP",
-        type: "Government Projects",
+        period: "Sep 2016 - Jun 2018",
+        role: "Fron End",
+        company: "Fron End",
+        type: "Entornos educativos y administrativos",
         summary:
-          "Developed and maintained administrative systems and websites, building a strong foundation in backend integration, responsive layout implementation, and enterprise web development.",
+          "Desarrollo Front-End para entornos educativos y administrativos con tecnologías web, servicios Back-End y bases de datos.",
         highlights: [
-          "Maintained and evolved multiple administrative web systems.",
-          "Built Web APIs and data-processing solutions.",
-          "Created responsive interfaces with HTML5, CSS3, and Bootstrap.",
-          "Worked in agile teams focused on stable continuous delivery.",
+          "Desarrollo de interfaces con HTML5, CSS3, Sass (SCSS), JavaScript, jQuery, AJAX y Bootstrap, con Responsive Web Design, compatibilidad cross-browser, componentes reutilizables, Semantic HTML y accesibilidad.",
+          "Implementación de formularios dinámicos con validación del lado del cliente y del servidor.",
+          "Integración de REST APIs y servicios Back-End; desarrollo de flujos de autenticación y gestión de sesiones, Cookies y caching.",
+          "Trabajo con PHP, MySQL y Firebase.",
+          "Uso de Jira, Git y Agile development durante el SDLC; pruebas funcionales, debugging, refactoring, continuous improvement y código mantenible.",
         ],
         projects: [],
         stack: [
           "JavaScript",
           "HTML5",
           "CSS3",
+          "Sass (SCSS)",
+          "jQuery",
+          "AJAX",
+          "PHP",
+          "MySQL",
+          "Firebase",
           "Bootstrap",
-          "C#",
-          ".NET",
           "REST APIs",
-          "SQL Server",
+          "Jira",
+          "Git",
+        ],
+      },
+    ],
+  },
+  en: {
+    badge: "PROFESSIONAL JOURNEY",
+    titleStart: "Professional experience in",
+    titleHighlight: "Front-End engineering",
+    description:
+      "Over 8 years of Front-End development experience with React, Next.js, TypeScript, and Angular. Experienced in enterprise web applications, scalable architecture, reusable components, accessibility, and collaboration in Agile (Scrum) teams.",
+    stackLabel: "Relevant technologies",
+    projectsLabel: "Professional contributions",
+    strengthsLabel: "Areas of experience",
+    metricsLabel: "Technical focus",
+    panel: {
+      overline: "FRONT-END ENGINEERING",
+      heading:
+        "Modern UI architecture, performance, code quality, and real product experience",
+      cards: [
+        {
+          title: "REUSABLE COMPONENTS",
+          value: "Reusable",
+          caption: "Reusable components and component libraries",
+          borderClass:
+            "border-[rgba(32,240,199,0.58)] shadow-[0_0_0_1px_rgba(32,240,199,0.12)]",
+          titleClass: "text-[#20f0c7]",
+        },
+        {
+          title: "FRONT-END ARCHITECTURE",
+          value: "Reliable",
+          caption: "Scalable and maintainable applications",
+          borderClass:
+            "border-[rgba(123,44,255,0.58)] shadow-[0_0_0_1px_rgba(123,44,255,0.12)]",
+          titleClass: "text-[#52c7ff]",
+        },
+        {
+          title: "AGILE COLLABORATION",
+          value: "Agile",
+          caption: "Collaboration with UX/UI, Backend, QA, DevOps, and Product Owners",
+          borderClass:
+            "border-[rgba(255,60,172,0.58)] shadow-[0_0_0_1px_rgba(255,60,172,0.12)]",
+          titleClass: "text-[#ffd84d]",
+        },
+      ],
+      bullets: [
+        "React, Next.js, TypeScript, Angular, and RxJS",
+        "Front-End architecture, Design Systems, and reusable components",
+        "SSR / SSG / ISR, performance, accessibility, and Responsive Design",
+        "Testing with Jest, React Testing Library, and Cypress",
+      ],
+    },
+    metrics: [
+      {
+        label: "APIs",
+        value: "REST / GraphQL",
+        icon: "api",
+        caption: "REST APIs, GraphQL, and Shopify Storefront API.",
+      },
+      {
+        label: "CI/CD",
+        value: "Azure DevOps / GitHub Actions",
+        icon: "delivery",
+        caption: "CI/CD Pipelines, GitHub Actions, and Docker.",
+      },
+      {
+        label: "Testing",
+        value: "Jest / RTL / Cypress",
+        icon: "testing",
+        caption: "Jest, React Testing Library, and Cypress.",
+      },
+      {
+        label: "Cloud & DevOps",
+        value: "Azure / Vercel",
+        icon: "cloud",
+        caption: "Azure DevOps, CI/CD Pipelines, and Vercel.",
+      },
+      {
+        label: "Next.js",
+        value: "SSR / SSG / ISR",
+        icon: "performance",
+        caption: "Server-side rendering, Static Site Generation, and Incremental Static Regeneration.",
+      },
+      {
+        label: "AI-Assisted Development",
+        value: "OpenAI / Copilot",
+        icon: "security",
+        caption: "GitHub Copilot, Claude Code, OpenCode, and OpenAI integrations.",
+      },
+    ],
+    roles: [
+      {
+        id: 1,
+        period: "Feb 2022 - Apr 2026",
+        role: "Senior Front-End Engineer",
+        company: "Afore Principal",
+        type: "",
+        summary:
+          "Developed enterprise financial-sector web applications with React, Next.js, TypeScript, and Angular, contributing to scalable Front-End architecture, reusable components, and development standards.",
+        highlights: [
+          "Developed an e-commerce platform for selling and contracting financial products, with reusable catalogs, quotation workflows, dynamic forms, search, filtering, sorting and comparison; includes a shopping cart for investment funds and payment selections for Debit Card, Direct Debit, and SPEI.",
+          "Integrated REST APIs, Shopify Storefront API, GraphQL, OpenAI-powered services, and third-party identity verification services.",
+          "Modernized legacy applications with Angular, TypeScript, RxJS, and Reactive Forms, alongside React, Next.js, jQuery, AJAX, HTML, and CSS solutions; used SSR, SSG, ISR, and Lazy Loading.",
+          "Built scalable Front-End architecture, reusable components, Design Systems, Storybook, Design Tokens, and Theming; used Redux Toolkit, Context API, and React Hook Form.",
+          "Integrated Drupal Headless CMS through JSON:API; used Dexie and IndexedDB, Microfrontends, and Module Federation.",
+          "Developed Responsive Design interfaces with HTML, CSS, Bootstrap, Sass (SCSS), and Vanilla Extract, applying Lazy Loading, Code Splitting, Core Web Vitals, and SEO.",
+          "Applied WCAG 2.1, Semantic HTML, and ARIA; used Cookies, Session Storage, Local Storage, and IndexedDB for client-side persistence.",
+          "Tested with Jest, React Testing Library, and Cypress; worked with Azure DevOps, GitHub Actions, Docker, CI/CD, Vercel, and Azure.",
+          "Led Front-End features from requirements analysis through production; defined development standards and participated in Code Reviews and mentoring with UX/UI, Backend, QA, DevOps, and Product Owner teams in Agile / Scrum.",
+          "Used AI-Assisted Development, GitHub Copilot, Claude Code, OpenCode, and OpenAI technologies.",
+          "Developed integrations with Node.js, Express.js, and Next.js API Routes; contributed to Backend for Frontend (BFF) services for React / Next.js applications and enterprise REST APIs.",
+        ],
+        projects: [],
+        stack: [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Angular",
+          "RxJS",
+          "Shopify Storefront API",
+          "GraphQL",
+          "REST APIs",
+          "OpenAI",
+          "Redux Toolkit",
+          "Context API",
+          "React Hook Form",
+          "Drupal Headless CMS",
+          "JSON:API",
+          "Dexie",
+          "IndexedDB",
+          "Module Federation",
+          "Jest",
+          "React Testing Library",
+          "Cypress",
+          "Azure DevOps",
+          "GitHub Actions",
+          "Docker",
+          "Vercel",
           "Azure",
+          "GitHub Copilot",
+          "Claude Code",
+          "OpenCode",
+          "Node.js",
+          "Express.js",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Figma",
+          "Storybook",
+          "Bootstrap",
+          "Sass (SCSS)",
+          "Vanilla Extract",
+        ],
+      },
+      {
+        id: 2,
+        period: "Jul 2018 - Jan 2022",
+        role: "Senior Front-End Developer",
+        company: "AXA Assistance",
+        type: "",
+        summary:
+          "Modernized enterprise applications by migrating legacy platforms built with ASP.NET MVC, HTML5, CSS3, JavaScript, jQuery, and Bootstrap to React, Next.js, TypeScript, and JavaScript ES6+ Front-End architectures.",
+        highlights: [
+          "Developed single-page applications with React, Next.js, TypeScript, and JavaScript ES6+, using component-based architecture and reusable components.",
+          "Built interfaces with HTML5, CSS3, jQuery, Bootstrap, Material UI, Sass (SCSS), Tailwind CSS, and Figma designs.",
+          "Implemented forms with React Hook Form and consumed REST APIs using Axios and Fetch API.",
+          "Configured React Router, Dynamic Routing, Protected Routes, Lazy Loading, and Code Splitting.",
+          "Developed with Angular, RxJS, NgRx, Angular Router, Angular Services, and Reactive Forms.",
+          "Optimized application performance through Code Splitting, Lazy Loading, and component refactoring; tested with React Testing Library and Cypress, applied WCAG 2.1, and collaborated with UX/UI, Backend, and QA on accessible, responsive interfaces and technical reviews.",
+          "Used Git, Webpack, Azure DevOps, GitHub Actions, Azure, AWS, CI/CD, and Zustand for state management.",
+        ],
+        projects: [],
+        stack: [
+          "ASP.NET MVC",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "JavaScript ES6+",
+          "HTML5",
+          "CSS3",
+          "jQuery",
+          "Bootstrap",
+          "Material UI",
+          "Sass (SCSS)",
+          "Tailwind CSS",
+          "React Hook Form",
+          "Axios",
+          "Fetch API",
+          "React Router",
+          "Angular",
+          "RxJS",
+          "NgRx",
+          "Zustand",
+          "REST APIs",
+          "React Testing Library",
+          "Cypress",
+          "Webpack",
+          "GitHub Actions",
+          "Azure DevOps",
+          "Azure",
+          "AWS",
           "Git",
         ],
       },
       {
-        id: 4,
-        period: "Mar 2012 - May 2016",
-        role: "Junior Front-End Developer",
-        company: "Metrix Networks",
-        type: "Healthcare Systems",
+        id: 3,
+        period: "Sep 2016 - Jun 2018",
+        role: "Fron End",
+        company: "Fron End",
+        type: "Educational and administrative environments",
         summary:
-          "Designed and developed responsive web interfaces for healthcare systems, with strong focus on cross-browser compatibility, UX, and reusable visual components.",
+          "Front-End development for educational and administrative environments using web technologies, Back-End services, and databases.",
         highlights: [
-          "Built adaptive interfaces for multiple devices and screen sizes.",
-          "Created visual components focused on UX and design consistency.",
-          "Developed layouts with HTML, CSS, JavaScript, and cross-browser support.",
-          "Validated and supported Chrome, Firefox, Safari, and Edge.",
+          "Built interfaces with HTML5, CSS3, Sass (SCSS), JavaScript, jQuery, AJAX, and Bootstrap, using Responsive Web Design, cross-browser compatibility, reusable UI components, Semantic HTML, and accessibility.",
+          "Implemented dynamic forms with client-side and server-side validation.",
+          "Integrated REST APIs and Back-End services; worked on authentication workflows, session management, Cookies, and caching.",
+          "Worked with PHP, MySQL, and Firebase.",
+          "Used Jira and Git in Agile development across the SDLC, including functional testing, debugging, refactoring, continuous improvement, and maintainable code.",
         ],
         projects: [],
         stack: [
           "JavaScript",
-          "TypeScript",
           "HTML5",
           "CSS3",
-          "Sass",
-          "Bootstrap",
-          "Material UI",
+          "Sass (SCSS)",
+          "jQuery",
+          "AJAX",
+          "PHP",
+          "MySQL",
           "Firebase",
+          "Bootstrap",
           "REST APIs",
+          "Jira",
+          "Git",
         ],
       },
     ],
@@ -555,13 +536,9 @@ function getTechIcon(tech: string) {
       return <TbApi className={iconClass} />;
     case "GraphQL":
       return <SiGraphql className={iconClass} />;
-    case "Auth0":
-      return <SiAuth0 className={iconClass} />;
     case "Azure":
       return <SiAzuredevops className={iconClass} />;
     case "AWS":
-      return <SiAwslambda className={iconClass} />;
-    case "AWS Lambda":
       return <SiAwslambda className={iconClass} />;
     case "HTML5":
       return <SiHtml5 className={iconClass} />;
@@ -591,10 +568,6 @@ function getTechIcon(tech: string) {
       return <SiJest className={iconClass} />;
     case "Testing Library":
       return <HiOutlineSparkles className={iconClass} />;
-    case "JWT":
-      return <HiOutlineSparkles className={iconClass} />;
-    case "OAuth2":
-      return <SiAuth0 className={iconClass} />;
     case "Docker":
       return <SiDocker className={iconClass} />;
     case "Drupal":
@@ -674,7 +647,7 @@ function Experience() {
                 </span>
               </h2>
 
-              <p className="mt-6 text-[1rem] leading-[1.95] text-[rgba(235,240,255,0.82)] sm:text-[1.03rem] lg:text-[1.04rem]">
+              <p className="mt-6 text-justify text-[1rem] leading-[1.95] text-[rgba(235,240,255,0.82)] sm:text-[1.03rem] lg:text-[1.04rem]">
                 {content.description}
               </p>
             </div>
@@ -758,7 +731,7 @@ function Experience() {
                               <p className="mt-1 text-[0.98rem] font-semibold text-white">
                                 {metric.value}
                               </p>
-                              <p className="mt-2 text-[0.82rem] leading-6 text-white/62">
+                              <p className={`mt-2 text-[0.82rem] leading-6 text-white/62 ${metric.caption.length >= 80 ? "text-justify" : ""}`}>
                                 {metric.caption}
                               </p>
                             </div>
@@ -808,9 +781,11 @@ function Experience() {
                         <p className="mt-1 text-[0.95rem] font-medium text-white/82 sm:text-[1rem]">
                           {item.company}
                         </p>
-                        <p className="mt-1 text-[0.82rem] uppercase tracking-[0.14em] text-white/40">
-                          {item.type}
-                        </p>
+                        {item.type && (
+                          <p className="mt-1 text-[0.82rem] uppercase tracking-[0.14em] text-white/40">
+                            {item.type}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -820,7 +795,7 @@ function Experience() {
                     </div>
                   </div>
 
-                  <p className="mt-5 max-w-3xl text-[0.92rem] leading-8 text-[rgba(235,240,255,0.78)] sm:text-[0.97rem]">
+                  <p className="mt-5 max-w-3xl text-justify text-[0.92rem] leading-8 text-[rgba(235,240,255,0.78)] sm:text-[0.97rem]">
                     {item.summary}
                   </p>
 
@@ -833,7 +808,7 @@ function Experience() {
                         <span className="mt-0.5 text-[#20f0c7]">
                           <HiOutlineSparkles size={16} />
                         </span>
-                        <p className="text-[0.88rem] leading-7 text-white/72 sm:text-[0.94rem]">
+                        <p className="text-justify text-[0.88rem] leading-7 text-white/72 sm:text-[0.94rem]">
                           {highlight}
                         </p>
                       </div>
@@ -862,7 +837,7 @@ function Experience() {
                                   <HiOutlineSparkles size={16} />
                                 )}
                               </span>
-                              <p className="text-[0.88rem] leading-7 text-white/72 sm:text-[0.94rem]">
+                              <p className="text-justify text-[0.88rem] leading-7 text-white/72 sm:text-[0.94rem]">
                                 {project}
                               </p>
                             </div>

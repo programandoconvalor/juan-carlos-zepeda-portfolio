@@ -42,7 +42,7 @@ export default function HeroSection() {
             <span className="text-white">{t.hero.roleComplement}</span>
           </h1>
 
-          <p className="mt-5 max-w-[600px] text-[0.96rem] leading-[1.8] text-[rgba(244,247,251,0.80)] sm:text-[0.98rem] lg:mt-5 lg:max-w-[550px] lg:text-[0.9rem] xl:max-w-[590px] xl:text-[0.94rem]">
+          <p className="mt-5 max-w-[600px] text-justify text-[0.96rem] leading-[1.8] text-[rgba(244,247,251,0.80)] sm:text-[0.98rem] lg:mt-5 lg:max-w-[550px] lg:text-[0.9rem] xl:max-w-[590px] xl:text-[0.94rem]">
             {t.hero.tagline}
           </p>
           <motion.div

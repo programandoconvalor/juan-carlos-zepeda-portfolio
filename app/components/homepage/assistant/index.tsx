@@ -135,7 +135,7 @@ export default function AssistantSection() {
               </div>
 
               {/* Bubble */}
-              <div className={`px-4 py-3 rounded-2xl text-sm leading-relaxed
+              <div className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${msg.content.length > 80 ? "text-justify" : ""}
                 ${msg.role === "user"
                   ? "bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white"
                   : "bg-[#11182f] border border-white/10 text-gray-200"
